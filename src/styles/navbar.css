@@ -1,0 +1,51 @@
+.navbar {
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2rem;
+ /*background-color: var(--bg-beigearenasuave);*/
+background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
+
+
+  /* línea inferior delicada */
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar img {
+  height: 150px;             /* logo más grande */
+  object-fit: contain;
+  margin-left: 0;
+}
+
+/* Menú */
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  color: var(--bg-blancocalidomafil);
+  font-weight: 600;
+}
+
+/* Items */
+.navbar ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* underline en arena oscuro al hover */
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0%;
+  height: 2px;
+  background: var(--text);
+  transition: width 0.25s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}

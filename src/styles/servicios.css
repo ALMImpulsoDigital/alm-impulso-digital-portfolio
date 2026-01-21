@@ -1,0 +1,144 @@
+/* src/styles/servicios.css */
+
+.servicios {
+  padding: 5rem 2rem;
+  background-image: url("/assets/fondoSobreMi.png");
+}
+
+.servicios h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--title);
+}
+
+.servicios .subtitulo {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 3rem;
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* grid */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2rem;
+}
+
+/* card */
+.servicio-card {
+  background: var(--bg-hero-1);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(11, 31, 58, 0.08);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(11, 31, 58, 0.12);
+}
+
+/* media (thumbnail) */
+.servicio-media {
+  position: relative;
+}
+
+.servicio-media img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay play */
+.servicio-media .play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  color: white;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s;
+}
+
+.servicio-media.media-clickable:hover .play-btn {
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+
+/* content */
+.servicio-content {
+  padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.servicio-content h3 {
+  color: var(--title);
+  margin-bottom: 0.35rem;
+}
+
+.servicio-sub {
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+.servicio-text {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.servicio-lista {
+  margin: 0.9rem 0 0.9rem;
+  padding-left: 1.1rem;
+  color: var(--text);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.servicio-ejemplo {
+  color: var(--title);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* acciones */
+.servicio-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.servicio-verdemo {
+  border: 1px solid rgba(209, 89, 83, 0.35);
+  background: rgba(209, 89, 83, 0.10);
+  color: var(--title);
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.servicio-verdemo:hover {
+  background: rgba(209, 89, 83, 0.18);
+}
+
+/* CTA */
+.servicio-cta {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 900;
+  border-bottom: 1px solid rgba(161, 36, 55, 0.25);
+  padding-bottom: 2px;
+}
+
+.servicio-cta:hover {
+  border-bottom-color: rgba(209, 89, 83, 0.7);
+}

@@ -1,0 +1,25 @@
+/* Contenedor general */
+.proyectos-page {
+  min-height: 100vh;
+  padding: 0; /* el padding lo maneja .proyectos */
+}
+
+/* ===== WEB ===== */
+.proyectos-page.web {
+  background: #fffcf0fe
+    
+}
+
+/* ===== MOBILE ===== */
+.proyectos-page.mobile {
+  background: 
+    #fffcf0fe
+}
+
+
+/* Subtítulo en páginas Web y Mobile */
+.proyectos-page.web .proyectos .subtitulo,
+.proyectos-page.mobile .proyectos .subtitulo {
+  font-weight: 500;                /* negrita */
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}

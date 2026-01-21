@@ -1,0 +1,83 @@
+/* src/styles/proyectosHome.css */
+
+.proyectos-home {
+  padding: 5rem 2rem;
+  background-image: url("/assets/fondoSobreMi.png");
+}
+
+.proyectos-home h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--title);
+}
+
+.proyectos-home .subtitulo {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 3rem;
+}
+
+.home-grid {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.home-card {
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 1.6rem;
+  min-height: 180px;
+  border: 1px solid rgba(11, 31, 58, 0.1);
+  box-shadow: 0 10px 30px rgba(11, 31, 58, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(11, 31, 58, 0.12);
+}
+
+/* WEB: azul + coral */
+.home-card.web {
+  background: var(--btn-secondary);
+  
+}
+
+/* MOBILE: vino + azul */
+.home-card.mobile {
+  background: 
+    rgba(195, 45, 45, 0.861);
+}
+
+.home-content h3 {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.home-content p {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.45;
+  font-size: 0.98rem;
+  max-width: 42ch;
+}
+
+.home-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 2px;
+}
+
+@media (max-width: 780px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}

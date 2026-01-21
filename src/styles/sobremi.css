@@ -1,0 +1,114 @@
+.sobremi {
+  padding: 5rem 2rem;
+  padding-bottom: 5rem; /* espacio para el indicador */
+  position: relative;
+
+  background-image: url("/assets/fondoSobreMi.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sobremi-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.sobremi h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.sobremi-text {
+  max-width: 750px;
+  margin: 0 auto 2.2rem auto; /* centra el bloque */
+  color: var(--text);
+  font-size: 1.05rem;
+
+  text-align: justify;
+  text-align-last: center; /* última línea centrada */
+  line-height: 1.65;
+}
+
+
+/* Línea divisoria */
+.sobremi-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  max-width: 1200px;
+  margin: 0 0 2rem 0;
+}
+
+/* Subtítulo */
+.sobremi-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--btn-secondary);
+}
+
+/* Tecnologías */
+.sobremi-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.sobremi-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+/* Item skill */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(95, 14, 64, 0.99);
+
+  transition: 0.2s ease;
+}
+
+/* Icono */
+.skill-icon {
+  font-size: 1.1rem;
+  opacity: 0.75;
+  filter: grayscale(40%);
+}
+
+/* Texto */
+.skill-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--title);
+}
+
+/* Hover elegante */
+.skill-item:hover {
+  transform: translateY(-1px);
+}
+
+.skill-item:hover .skill-icon {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+
+/* Ajustes del indicador heredado del Hero (fondo blanco) */
+.sobremi .scroll-indicator {
+  border-color: rgba(138, 119, 90, 0.55);
+  opacity: 0.85;
+}
+
+.sobremi .scroll-indicator .chevron {
+  border-right-color: var(--title);
+  border-bottom-color: var(--title);
+}
