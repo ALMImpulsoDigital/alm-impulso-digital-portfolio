@@ -1,5 +1,3 @@
-/* src/styles/servicios.css */
-
 .servicios {
   padding: 5rem 2rem;
   background-image: url("/assets/fondoSobreMi.png");
@@ -42,7 +40,7 @@
   box-shadow: 0 16px 40px rgba(11, 31, 58, 0.12);
 }
 
-/* media (thumbnail) */
+/* media */
 .servicio-media {
   position: relative;
 }
@@ -54,21 +52,40 @@
   display: block;
 }
 
-/* Overlay play */
+/* 🎯 PLAY MODERNO */
 .servicio-media .play-btn {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
-  color: white;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 14px;
   transition: background 0.3s;
 }
 
-.servicio-media.media-clickable:hover .play-btn {
-  background: rgba(0, 0, 0, 0.55);
+.servicio-media .play-btn::before {
+  content: "▶";
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.servicio-media:hover .play-btn::before {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.05);
+}
+
+.servicio-media:hover .play-btn {
+  background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
 
@@ -93,21 +110,6 @@
   line-height: 1.55;
 }
 
-.servicio-lista {
-  margin: 0.9rem 0 0.9rem;
-  padding-left: 1.1rem;
-  color: var(--text);
-  display: grid;
-  gap: 0.35rem;
-}
-
-.servicio-ejemplo {
-  color: var(--title);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-/* acciones */
 .servicio-actions {
   display: flex;
   align-items: center;
@@ -115,49 +117,17 @@
   gap: 0.75rem;
 }
 
-.servicio-verdemo {
-  border: 1px solid rgba(209, 89, 83, 0.35);
-  background: rgba(209, 89, 83, 0.10);
-  color: var(--title);
-  padding: 0.5rem 0.75rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
-}
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .servicio-media .play-btn {
+    background: rgba(0, 0, 0, 0.08);
+  }
 
-.servicio-verdemo:hover {
-  background: rgba(209, 89, 83, 0.18);
-}
-
-/* CTA */
-.servicio-cta {
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 900;
-  border-bottom: 1px solid rgba(161, 36, 55, 0.25);
-  padding-bottom: 2px;
-}
-
-.servicio-cta:hover {
-  border-bottom-color: rgba(209, 89, 83, 0.7);
-}
-
-.servicios-features {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem auto 2.5rem;
-  display: grid;
-  gap: 0.7rem;
-  max-width: 420px;
-  justify-items: center;
-}
-
-.servicios-features li {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 500;
-  color: var(--text);
-  font-size: 0.95rem;
+  .servicio-media .play-btn::before {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    background: rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.8);
+  }
 }

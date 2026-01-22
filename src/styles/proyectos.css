@@ -1,4 +1,3 @@
-
 .proyectos h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -47,7 +46,6 @@
 
 .contenido {
   padding: 1.2rem;
-  
 }
 
 .contenido h3 {
@@ -68,7 +66,7 @@
 }
 
 .tech span {
-  background: rgba(209, 89, 83, 0.12); /* coral suave */
+  background: rgba(209, 89, 83, 0.12);
   color: var(--title);
   padding: 0.3rem 0.6rem;
   border-radius: 6px;
@@ -76,26 +74,10 @@
   border: 1px solid rgba(209, 89, 83, 0.25);
 }
 
-/* Título principal en blanco según la página */
 .proyectos-page.web .proyectos h2,
 .proyectos-page.mobile .proyectos h2 {
   color: var(--text);
   text-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-}
-
-.video-embed {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.video-embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .media-clickable {
@@ -108,33 +90,49 @@
   border-radius: 14px;
 }
 
+/* 🎯 PLAY MODERNO */
 .play-btn {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 64px;
-  color: white;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 14px;
   transition: background 0.3s;
 }
 
-.media-clickable:hover .play-btn {
-  background: rgba(0, 0, 0, 0.55);
+.play-btn::before {
+  content: "▶";
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
 }
 
+.media-clickable:hover .play-btn::before {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.05);
+}
+
+.media-clickable:hover .play-btn {
+  background: rgba(0, 0, 0, 0.35);
+}
 
 .descripcion {
   font-size: 0.95rem;
   color: var(--text);
   display: -webkit-box;
   -webkit-box-orient: vertical;
-
-  -webkit-line-clamp: 4; /* Chrome, Edge, Safari */
-  line-clamp: 4;         /* estándar (para el warning) */
-
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -144,7 +142,6 @@
   line-clamp: unset;
   overflow: visible;
 }
-
 
 .leer-mas {
   background: none;
@@ -158,4 +155,19 @@
 
 .leer-mas:hover {
   text-decoration: underline;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .play-btn {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  .play-btn::before {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    background: rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.8);
+  }
 }

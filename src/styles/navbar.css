@@ -1,3 +1,4 @@
+/* Navbar principal */
 .navbar {
   height: 76px;
   display: flex;
@@ -5,22 +6,22 @@
   align-items: center;
   padding: 0 1.5rem;
 
- 
- /*background-color: var(--bg-beigearenasuave);*/
-background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
-
-
-  /* línea inferior delicada */
+  background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
   border-bottom: 1px solid var(--border);
 }
 
-.navbar img {
-  height: 40px;             /* logo más grande */
-  object-fit: contain;
-   margin-right: 2rem; /* 👈 separa del menú */
+/* Contenedor del logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* empuja el menú hacia la derecha */
 }
 
-
+/* Logo */
+.navbar img {
+  height: 48px; /* tamaño visible en mobile */
+  object-fit: contain;
+}
 
 /* Menú */
 .navbar ul {
@@ -37,7 +38,7 @@ background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
   padding: 6px 0;
 }
 
-/* underline en arena oscuro al hover */
+/* underline en hover */
 .navbar ul li::after {
   content: "";
   position: absolute;
@@ -51,4 +52,27 @@ background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
 
 .navbar ul li:hover::after {
   width: 100%;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .navbar img {
+    height: 58px; /* logo más protagonista en desktop */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+    padding: 0 1rem;
+  }
+
+  .nav-logo {
+    padding-right: 1rem; /* aire visual entre logo y menú */
+  }
+
+  .navbar ul {
+    gap: 1.5rem;
+  }
 }

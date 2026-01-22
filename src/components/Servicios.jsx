@@ -13,6 +13,7 @@ export default function Servicios() {
       <ul className="servicios-features">
         <li>🚀 Tecnologías modernas</li>
         <li>🌐 Hosting profesional</li>
+        <li>📊 Optimización SEO</li>
         <li>🔗 Dominio propio</li>
         <li>🔒 Certificado SSL</li>
         <li>⚡ CDN global</li>
