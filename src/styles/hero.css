@@ -75,6 +75,12 @@
   filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.15));
 }
 
+@media (max-width: 768px) {
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+
 /* Indicador de scroll (más visible, sin ser invasivo) */
 .scroll-indicator {
   position: absolute;

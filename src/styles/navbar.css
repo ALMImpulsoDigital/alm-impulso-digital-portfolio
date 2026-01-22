@@ -3,8 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1.5rem;
 
-  padding: 0 2rem;
+ 
  /*background-color: var(--bg-beigearenasuave);*/
 background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
 
@@ -14,10 +15,12 @@ background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
 }
 
 .navbar img {
-  height: 150px;             /* logo más grande */
+  height: 40px;             /* logo más grande */
   object-fit: contain;
-  margin-left: 0;
+   margin-right: 2rem; /* 👈 separa del menú */
 }
+
+
 
 /* Menú */
 .navbar ul {

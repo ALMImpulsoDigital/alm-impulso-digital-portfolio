@@ -142,3 +142,22 @@
 .servicio-cta:hover {
   border-bottom-color: rgba(209, 89, 83, 0.7);
 }
+
+.servicios-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem auto 2.5rem;
+  display: grid;
+  gap: 0.7rem;
+  max-width: 420px;
+  justify-items: center;
+}
+
+.servicios-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.95rem;
+}
