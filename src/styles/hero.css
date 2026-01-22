@@ -1,7 +1,8 @@
 .hero {
   min-height: 100vh;
   padding: 4rem 2rem;
-  background-color: var(--bg-arena);
+  /*background-color: var(--bg-arena);*/
+  background: linear-gradient(135deg, var(--bg-arena), var(--bg-hero-2));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

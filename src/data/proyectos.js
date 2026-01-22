@@ -4,7 +4,7 @@ export const proyectosWeb = [
     descripcion:
       "Web comercial con catálogo, carrito, presupuestos personalizados y pagos online.",
     tipo: "video",
-    thumbnail: "/assets/proyectos/webMunayPasteleria.png",
+    thumbnail: "/assets/proyectos/webMunayPasteleria.jpeg",
     tecnologias: [
       "React",
       "Firebase",
