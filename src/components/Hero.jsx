@@ -23,7 +23,7 @@ export default function Hero() {
 
       <div className="hero-image">
         <img
-          src="/assets/imagenHero.png"
+          src="/assets/imagenHeroNueva.png"
           alt="ALM Impulso Digital en dispositivos"
         />
       </div>
