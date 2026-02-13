@@ -12,7 +12,12 @@ export default function Contacto() {
           Hablemos y veamos cómo impulsarlo.
         </p>
 
-        <a className="contacto-cta" href="mailto:almimpulsodigital@gmail.com">
+        <a
+          className="contacto-cta"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=almimpulsodigital@gmail.com&su=Consulta%20desde%20ALM%20Impulso%20Digital"
+          target="_blank"
+          rel="noreferrer"
+        >
           Escribime
         </a>
 
