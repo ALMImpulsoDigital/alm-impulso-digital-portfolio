@@ -14,6 +14,24 @@ export const proyectosWeb = [
     ],
   },
 
+    {
+    titulo: "Sistema Web Reserva de Cabañas Aleli",
+    descripcion:
+       "Sistema web para la gestión y reserva de cabañas, compuesto por una landing comercial informativa y un panel administrador. Permite visualizar el complejo, sus comodidades y ubicación, además de gestionar cabañas, clientes y reservas mediante un calendario de disponibilidad interactivo que muestra fechas ocupadas por unidad.",
+    tipo: "video",
+    vimeoId: "1164795324",
+    thumbnail: "/assets/proyectos/webCabanasAleli.png",
+    tecnologias: [
+      "React",
+    "Vite",
+    "Firebase",
+    "Firestore",
+    "Authentication",
+    "CSS",
+    "Responsive Design"
+    ],
+  },
+
   {
     titulo: "Aplicación Web Taller Mecánico + App Móvil",
     descripcion: `Esta es una aplicación web desarrollada con ASP.NET Core (API REST), SQL Server y React + TypeScript, diseñada para optimizar la administración de un taller automotor multimarca. El sistema permite gestionar clientes, vehículos, tipos de servicios, órdenes de trabajo, pasos del proceso y presupuestos, ofreciendo una visión completa del flujo de cada reparación.
