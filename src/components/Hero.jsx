@@ -24,14 +24,6 @@ export default function Hero() {
       <a href="#contacto" className="hero-budget-btn">
         Pedí tu presupuesto
       </a>
-
-      <a
-        href="#sobremi"
-        className="scroll-indicator"
-        aria-label="Ir a Sobre mí"
-      >
-        <span className="chevron"></span>
-      </a>
     </section>
   );
 }

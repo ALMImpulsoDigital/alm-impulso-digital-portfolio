@@ -36,8 +36,7 @@ background: linear-gradient(
 
 .hero-content,
 .hero-right-text,
-.hero-budget-btn,
-.scroll-indicator {
+.hero-budget-btn {
   position: relative;
   z-index: 1;
 }
@@ -89,7 +88,7 @@ background: linear-gradient(
 .hero-budget-btn {
   position: absolute;
   left: 50%;
-  bottom: 7.1rem;
+  bottom: 3.1rem;
   transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
@@ -113,39 +112,7 @@ background: linear-gradient(
   box-shadow: 0 16px 34px rgba(149, 61, 84, 0.35);
 }
 
-/* Indicador de scroll */
-.scroll-indicator {
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 1px solid rgba(230, 229, 229, 0.45);
-  opacity: 0.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
 
-.scroll-indicator:hover {
-  transform: translateX(-50%) scale(1.08);
-  opacity: 1;
-}
-
-.scroll-indicator .chevron {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid rgba(230, 229, 229, 0.95);
-  border-bottom: 2px solid rgba(230, 229, 229, 0.95);
-  transform: rotate(45deg);
-  animation: scrollHint 2.2s infinite ease-in-out;
-}
 
 @keyframes scrollHint {
   0% {
@@ -162,12 +129,7 @@ background: linear-gradient(
   }
 }
 
-.scroll-indicator:focus,
-.scroll-indicator:focus-visible,
-.scroll-indicator:active {
-  outline: none;
-  box-shadow: none;
-}
+
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -276,10 +238,5 @@ background: linear-gradient(
 
 
 
-/* Accesibilidad */
-@media (prefers-reduced-motion: reduce) {
-  .scroll-indicator .chevron {
-    animation: none;
-  }
-}
+
 
