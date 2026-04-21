@@ -1,0 +1,123 @@
+.tecnologias-section {
+  padding: 0.3rem 1.5rem; /* 👈 antes 4.5rem */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.tecnologias-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(34, 54, 73, 0.68);
+}
+
+.tecnologias-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 950px; /* 👈 más angosto */
+  margin: 0 auto;
+}
+
+.tecnologias-title {
+  font-size: 2.2rem; /* 👈 antes 2.6 */
+  margin-bottom: 0.8rem;
+  color: var(--color-principal);
+  text-align: center;
+  font-family: var(--font-subtitle);
+}
+
+/* GRID */
+.tecnologias-skills {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.8rem; /* 👈 menos espacio */
+  justify-items: center;
+  align-items: center;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1.2rem 0; /* 👈 antes 2rem */
+  z-index: 1;
+}
+
+/* FONDO DIFUSO */
+.tecnologias-skills::before {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%; /* 👈 más chico */
+  background: linear-gradient(
+    90deg,
+    rgba(149, 61, 84, 0) 0%,
+    rgba(149, 61, 84, 0.18) 20%,
+    rgba(149, 61, 84, 0.26) 50%,
+    rgba(149, 61, 84, 0.18) 80%,
+    rgba(149, 61, 84, 0) 100%
+  );
+  filter: blur(14px); /* 👈 menos blur */
+  z-index: 0;
+}
+
+/* ITEM */
+.tecnologia-item {
+  width: 100%;
+  max-width: 95px; /* 👈 antes 125 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ICONO */
+.tecnologia-image {
+  width: 100%;
+  max-width: 70px; /* 👈 antes 95 */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.tecnologia-item:hover .tecnologia-image {
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .tecnologias-skills {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 560px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  .tecnologias-section {
+    padding: 1.4rem 1rem;
+  }
+
+  .tecnologias-title {
+    font-size: 1.7rem;
+  }
+
+  .tecnologias-skills {
+    grid-template-columns: repeat(6, 1fr); /* 👈 6 por fila */
+    gap: 0.4rem; /* 👈 un poco menos de espacio */
+    max-width: 300px; /* 👈 importante para que no se estiren */
+    padding: 0.8rem 0.3rem;
+     }
+
+  .tecnologia-item {
+    max-width: 55px;
+  }
+
+  .tecnologia-image {
+    max-width: 38px; /* 👈 iconos más chicos */
+  }
+}

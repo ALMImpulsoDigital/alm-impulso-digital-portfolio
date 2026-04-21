@@ -1,12 +1,23 @@
+/* Para que las secciones no queden tapadas por el navbar fijo */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
 /* Navbar principal */
 .navbar {
-  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
+  z-index: 1000;
 
-  background: linear-gradient(50deg, var(--accent), var(--btn-secondary));
+  background: linear-gradient(50deg, var(--color-navbar), var(--color-navbar));
   border-bottom: 1px solid var(--border);
 }
 
@@ -14,65 +25,165 @@
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-right: auto; /* empuja el menú hacia la derecha */
+  margin-right: auto;
+  position: relative;
+  z-index: 1002;
 }
 
 /* Logo */
 .navbar img {
-  height: 48px; /* tamaño visible en mobile */
+  height: 48px;
   object-fit: contain;
+  display: block;
 }
 
-/* Menú */
-.navbar ul {
+/* Menú desktop */
+.nav-menu {
   display: flex;
   gap: 2rem;
   color: var(--bg-blancocalidomafil);
   font-weight: 600;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Items */
-.navbar ul li {
+/* Links */
+.nav-menu li {
   cursor: pointer;
   position: relative;
   padding: 6px 0;
 }
 
+.nav-menu li a {
+  color: var(--bg-blancocalidomafil);
+  text-decoration: none;
+  font-family: var(--font-text);
+}
+
 /* underline en hover */
-.navbar ul li::after {
+.nav-menu li::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 2px;
   width: 0%;
   height: 2px;
-  background: var(--text);
+  background: var(--color-principal);
   transition: width 0.25s ease;
 }
 
-.navbar ul li:hover::after {
+.nav-menu li:hover::after {
   width: 100%;
+}
+
+/* Botón hamburguesa oculto en desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
   .navbar img {
-    height: 58px; /* logo más protagonista en desktop */
+    height: 58px;
   }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+  html {
+    scroll-padding-top: 64px;
+  }
+
   .navbar {
     height: 64px;
     padding: 0 1rem;
   }
 
   .nav-logo {
-    padding-right: 1rem; /* aire visual entre logo y menú */
+    padding-right: 1rem;
   }
 
-  .navbar ul {
-    gap: 1.5rem;
+  .navbar img {
+    height: 42px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    min-width: 170px;
+    padding: 0.45rem 0;
+    background: rgba(34, 54, 73, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-menu li::after {
+    display: none;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    color: #ffffff;
+  }
+
+  .nav-menu li a:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  /* Animación a cruz */
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }

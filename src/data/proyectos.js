@@ -1,10 +1,11 @@
 export const proyectosWeb = [
   {
-    titulo: "Sistema Web Pastelería Munay - EN DESARROLLO",
+    titulo: "Sistema Web Pastelería Munay",
     descripcion:
       "Web comercial con catálogo, carrito, presupuestos personalizados y pagos online.",
     tipo: "video",
-    thumbnail: "/assets/proyectos/webMunayPasteleria.jpeg",
+    vimeoId: "1185192784",
+    thumbnail: "/assets/proyectos/webMunayPasteleria.png",
     tecnologias: [
       "React",
       "Firebase",
@@ -13,7 +14,7 @@ export const proyectosWeb = [
       "CSS",
     ],
   },
-
+/*
     {
     titulo: "Sistema Web Reserva de Cabañas Aleli",
     descripcion:
@@ -30,7 +31,7 @@ export const proyectosWeb = [
     "CSS",
     "Responsive Design"
     ],
-  },
+  }, */
 
   {
     titulo: "Aplicación Web Taller Mecánico + App Móvil",

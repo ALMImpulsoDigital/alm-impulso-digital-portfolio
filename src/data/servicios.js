@@ -20,7 +20,7 @@ export const servicios = [
       "Perfecta para presentar quién sos, qué hacés, tu portfolio y contacto sin navegar a otras páginas. Muy usada en portfolios y estudios.",
     incluye: ["Sección servicios", "Sección proyectos", "Sobre mí", "Contacto", "Diseño responsive"],
     ejemplo: "Ejemplo: portfolio profesional, estudio creativo, emprendimiento personal.",
-    thumbnail: "/assets/servicios/OnePage.png",
+    thumbnail: "/assets/servicios/OnePage.jpeg",
     vimeoId: "1156594363",
     
   },
@@ -68,7 +68,7 @@ export const servicios = [
       "Ideal si querés una experiencia móvil optimizada: seguimiento, notificaciones, consultas rápidas, acciones desde el teléfono.",
     incluye: ["Flutter", "Consumo de API", "Login/roles", "UI moderna + responsive"],
     ejemplo: "Ejemplo: app complemento de sistema web (taller, canchas, pedidos, etc.).",
-    thumbnail: "/assets/servicios/AppMovil.png",
+    thumbnail: "/assets/servicios/AppMovil.jpeg",
     vimeoId: "1156856024",
     
   },

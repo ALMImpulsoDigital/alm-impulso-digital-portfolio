@@ -1,9 +1,8 @@
-// src/components/ScrollToHash.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function ScrollToHash() {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -11,8 +10,11 @@ export default function ScrollToHash() {
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
       }
+    } else {
+      // 👇 cuando NO hay hash → ir arriba
+      window.scrollTo(0, 0);
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return null;
 }

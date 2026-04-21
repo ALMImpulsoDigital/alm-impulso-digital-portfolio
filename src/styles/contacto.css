@@ -1,6 +1,6 @@
 .contacto {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, var(--bg-hero-1), var(--bg-hero-2));
+  background: var(--color-principal-claro);
 }
 
 .contacto-inner {

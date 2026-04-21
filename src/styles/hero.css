@@ -1,104 +1,129 @@
 .hero {
   min-height: 100vh;
-  padding: 4rem 2rem;
-  /*background-color: var(--bg-arena);*/
-  background: linear-gradient(135deg, var(--bg-arena), var(--bg-hero-2));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  padding: 8rem 2rem 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-
-  position: relative; /* para el scroll-indicator */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-/* Texto */
+/* Fondo diagonal semitransparente encima del parallax */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+background: linear-gradient(
+  115deg,
+  rgba(246, 235, 235, 0.85) 0%,
+  rgba(246, 235, 235, 0.85) 46%,  /* claro */
+  
+  rgba(246, 235, 235, 0.7) 48%,   /* transición empieza */
+  rgba(15, 55, 95, 0.7) 52%,      /* transición termina */
+  
+  rgba(15, 55, 95, 0.85) 54%,     /* azul sólido */
+  rgba(15, 55, 95, 0.85) 100%
+);
+}
+/* Sacamos la imagen local del hero */
+.hero::after {
+  content: none;
+}
+
+.hero-content,
+.hero-right-text,
+.hero-budget-btn,
+.scroll-indicator {
+  position: relative;
+  z-index: 1;
+}
+
+/* Columna izquierda */
+.hero-content {
+  flex: 1;
+  max-width: 620px;
+}
+
 .hero-content h1 {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  letter-spacing: -1px;
-  font-size: 3.2rem;
-  margin-bottom: 1.2rem;
-  color: var(--title);
+  font-family: var(--font-title);
+  font-size: clamp(2.7rem, 5.4vw, 4.7rem);
+  line-height: 1.08;
+  letter-spacing: 0.7px;
+  margin-top: -8rem;
+  margin-bottom: 4.5rem;
+  color: var(--color-detalle);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-family: var(--font-text);
+  font-size: 1.15rem;
   max-width: 520px;
-  margin-bottom: 1rem;
-  color: var(--text);
+  color: var(--color-secundario);
+  opacity: 0.95;
 }
 
-/* Botones */
-.btn-accent-servicios,
-.btn-accent-proyectos {
-  display: inline-block;
-  padding: 0.9rem 1.6rem;
-  color: #fff;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-accent-servicios {
-  background: var(--btn-primary);
-}
-
-.btn-accent-proyectos {
-  background: var(--btn-secondary);
-}
-
-.btn-accent-servicios:hover,
-.btn-accent-proyectos:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(209, 89, 83, 0.35);
-}
-
-/* Contenedor de acciones */
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-/* Imagen */
-.hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Columna derecha */
+.hero-right-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: right;
 }
 
-.hero-image img {
-  max-width: 80%;
-  height: auto;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.15));
-
-  animation: heroFloat 6s ease-in-out infinite; /* ✅ CAMBIO: flotación */
-  will-change: transform; /* ✅ CAMBIO */
+.hero-right-text span {
+  font-family: var(--font-subtitle);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.05;
+  color: var(--color-principal);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
-/* ✅ CAMBIO: keyframes flotación */
-@keyframes heroFloat {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+/* Botón inferior centrado */
+.hero-budget-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 7.1rem;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.15rem 2.2rem;
+  min-width: 255px;
+  border-radius: 999px;
+  background-color: var(--color-detalle);
+  color: #fff;
+  font-family: var(--font-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 12px 28px rgba(149, 61, 84, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.hero-budget-btn:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 16px 34px rgba(149, 61, 84, 0.35);
 }
 
 /* Indicador de scroll */
 .scroll-indicator {
   position: absolute;
-  bottom: 5px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(138, 119, 90, 0.45);
-  opacity: 0.7;
+  border: 1px solid rgba(230, 229, 229, 0.45);
+  opacity: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,23 +134,32 @@
 }
 
 .scroll-indicator:hover {
-  transform: translateX(-50%) scale(1.1);
-  opacity: 0.9;
+  transform: translateX(-50%) scale(1.08);
+  opacity: 1;
 }
 
 .scroll-indicator .chevron {
   width: 10px;
   height: 10px;
-  border-right: 2px solid rgba(138, 119, 90, 0.9);
-  border-bottom: 2px solid rgba(138, 119, 90, 0.9);
+  border-right: 2px solid rgba(230, 229, 229, 0.95);
+  border-bottom: 2px solid rgba(230, 229, 229, 0.95);
   transform: rotate(45deg);
   animation: scrollHint 2.2s infinite ease-in-out;
 }
 
 @keyframes scrollHint {
-  0%   { transform: rotate(45deg) translateY(0);   opacity: 0.45; }
-  50%  { transform: rotate(45deg) translateY(6px); opacity: 0.9; }
-  100% { transform: rotate(45deg) translateY(0);   opacity: 0.45; }
+  0% {
+    transform: rotate(45deg) translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: rotate(45deg) translateY(6px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(45deg) translateY(0);
+    opacity: 0.45;
+  }
 }
 
 .scroll-indicator:focus,
@@ -135,114 +169,117 @@
   box-shadow: none;
 }
 
-/* Tablet (centrado) */
+/* Tablet */
 @media (max-width: 1024px) {
   .hero {
-    text-align: center;
-    padding: 3rem 2rem;
     flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .hero-actions {
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-content p {
-    margin: 0 auto 1.2rem;
-  }
-
-  .hero-image {
-    margin-top: 1.2rem;
-  }
-}
-
-/* ✅ MOBILE: Título → Imagen → Texto → Botones */
-@media (max-width: 768px) {
-  .hero {
-    min-height: auto; /* ✅ CAMBIO: evita vacío */
-    padding: 2rem 1.2rem 3.2rem; /* ✅ CAMBIO: aire arriba */
-    gap: 1rem;
+    text-align: center;
+    padding: 6rem 1.8rem 7rem;
   }
 
   .hero-content {
-    display: contents; /* mantiene el reorden sin tocar JSX */
-  }
-
-  .hero-content h1 {
-    order: 1;
-    font-size: 2.25rem; /* ✅ CAMBIO: tamaño realista en mobile */
-    line-height: 1.15;
-    margin-bottom: 0.6rem;
-  }
-
-  .hero-image {
-    order: 2;
-    margin: 0.4rem 0 0.8rem;
-  }
-
-  .hero-image img {
-    max-width: 96%; /* ✅ CAMBIO: más chica para que no se corte */
+    max-width: 760px;
   }
 
   .hero-content p {
-    order: 3;
-    font-size: 1.05rem; /* ✅ CAMBIO: vuelve a un tamaño legible */
-    margin: 0 auto 1rem;
-    max-width: 34ch; /* ✅ CAMBIO: lectura más prolija en mobile */
+    margin: 0 auto;
   }
 
-  .hero-actions {
-    order: 4;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 0.2rem;
+  .hero-right-text {
+    align-items: center;
+    text-align: center;
+    margin-top: 0.8rem;
   }
 
-  .btn-accent-servicios,
-  .btn-accent-proyectos {
-    padding: 0.95rem 1.4rem;
-    font-size: 0.95rem; /* ✅ CAMBIO: tamaño normal en mobile */
-  }
-
-  /* ✅ CAMBIO: flotación más sutil en mobile */
-  @keyframes heroFloat {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
+  .hero-right-text span {
+    color: #ffffff;
   }
 }
 
-/* ✅ Mobile chico */
-@media (max-width: 480px) {
+/* Mobile */
+@media (max-width: 768px) {
   .hero {
-    padding: 1.6rem 1rem 3rem; /* ✅ CAMBIO: corrige 3cqw -> 3rem */
+    min-height: 92vh;
+    padding: 6.4rem 1.2rem 7.4rem;
+    gap: 1.4rem;
   }
+
+  .hero::before {
+  background: linear-gradient(
+    155deg,
+    rgba(230, 229, 229, 0.62) 0%,
+    rgba(230, 229, 229, 0.62) 52%,
+    rgba(20, 70, 117, 0.62) 58%,    /* 👈 mismo punto */
+    rgba(20, 70, 117, 0.62) 100%
+  );
+}
 
   .hero-content h1 {
-    font-size: 2.05rem; /* ✅ CAMBIO: balanceado */
-  }
-
-  .hero-image img {
-    max-width: 92%; /* ✅ CAMBIO: un poco más chica en 390px */
+    font-size: 2.4rem;
+    line-height: 1.08;
+    margin-top: -0.3rem;
   }
 
   .hero-content p {
     font-size: 1rem;
-    max-width: 32ch;
+    max-width: 34ch;
   }
 
-  .btn-accent-servicios,
-  .btn-accent-proyectos {
+  .hero-right-text {
+    gap: 0.35rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-right-text span {
+    font-size: 1.8rem;
+  }
+
+  .hero-budget-btn {
+    bottom: 4.8rem;
+    padding: 1rem 1.8rem;
+    min-width: 225px;
+    font-size: 0.98rem;
+  }
+}
+
+/* Mobile chico */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 100vh;
+    padding: 6rem 1rem 7rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.50rem;
+    margin-top: -0.1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.98rem;
+  }
+
+  .hero-right-text {
+    margin-bottom: 3.5rem;
+  }
+
+  .hero-right-text span {
+    font-size: 1.45rem;
+  }
+
+  .hero-budget-btn {
+    bottom: 4.6rem;
+    min-width: 210px;
     font-size: 0.95rem;
   }
 }
 
-/* ✅ Accesibilidad: si el usuario prefiere menos movimiento */
+
+
+/* Accesibilidad */
 @media (prefers-reduced-motion: reduce) {
-  .hero-image img {
+  .scroll-indicator .chevron {
     animation: none;
   }
 }
+
