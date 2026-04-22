@@ -9,7 +9,7 @@ export default function TecnologiasSection() {
     { name: "Flutter", image: "/assets/iconos/Flutter.png" },
     { name: "Git", image: "/assets/iconos/Git.png" },
     { name: "GitHub", image: "/assets/iconos/GitHub.png" },
-    { name: ".Net", image: "/assets/iconos/.Net.png" },
+    { name: ".Net", image: "/assets/iconos/Net.png" },
     { name: "JS", image: "/assets/iconos/JS.png" },
     { name: "Firebase", image: "/assets/iconos/Firebase.png" },
     { name: "Responsive", image: "/assets/iconos/Responsive.png" },
