@@ -1,97 +1,504 @@
-/* Reset básico */
-* {
+/* ==============================
+   RESET GENERAL
+============================== */
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Paleta nueva */
-:root {
-  --color-principal: #e6e5e5;
-  --color-principal-claro: #fff7f7;
-  --color-secundario: #144675;
-  --color-detalle: #953d54;
-  --color-detalle-claro:#d38c9f;
-  --color-parrafo:#223649;
-  --color-navbar:#223649;
-
-  /* Fondos derivados */
-  --bg-hero-1: #e6e5e5;
-  --bg-hero-2: #f2f2f2;
-  --bg-white: #ffffff;
-  --bg-arena: #e6e5e5;
-  --bg-arenaoscuro: #cfcfcf;
-  --bg-beigearenasuave: #f5f5f5;
-  --bg-blancocalidomafil: #fafafa;
-
-  /* Textos */
-  --title: #144675;
-  --text: #144675;
-  --accent: #953d54;
-
-  /* Bordes */
-  --border: rgba(20, 70, 117, 0.2);
-
-  /* Botones / acentos */
-  --btn-primary: #953d54;
-  --btn-secondary: #144675;
-  --btn-tertiary: #e6e5e5;
-
-  /* Hover */
-  --btn-primary-hover: #7f3145;
-  --btn-secondary-hover: #10385e;
-  --btn-tertiary-hover: #d8d7d7;
-
-  /* Tipografías */
-  --font-title: "Abril Fatface", serif;
-  --font-subtitle: "Trocchi", serif;
-  --font-text: "HK Grotesk", sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Tipografía base */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ==============================
+   IDENTIDAD VISUAL ALM
+============================== */
+
+:root {
+  /* ------------------------------
+     COLORES INSTITUCIONALES
+  ------------------------------ */
+
+  --color-blue: #144675;
+  --color-blue-light: #3e6e9c;
+  --color-blue-hover: #1a5a94;
+
+  --color-burgundy: #953d54;
+  --color-burgundy-light: #d38c9f;
+  --color-burgundy-hover: #a84a63;
+
+  /* ------------------------------
+     NEUTROS CÁLIDOS Y LUMINOSOS
+  ------------------------------ */
+
+  --color-white: #ffffff;
+  --color-ivory: #faf9f7;
+  --color-cream: #f5f3f0;
+  --color-sand: #efece8;
+  --color-border: #e3dfda;
+
+  /* ------------------------------
+     TEXTOS
+  ------------------------------ */
+
+  --color-text-primary: #223649;
+  --color-text-secondary: #726e69;
+  --color-text-inverted: #ffffff;
+
+  /* ------------------------------
+     FONDOS PRINCIPALES
+  ------------------------------ */
+
+  --bg-primary: #faf9f7;
+  --bg-secondary: #f5f3f0;
+  --bg-highlight: #efece8;
+  --bg-surface: #ffffff;
+
+  /* Fondos con color institucional muy suave */
+
+  --bg-blue-soft: rgba(62, 110, 156, 0.09);
+  --bg-burgundy-soft: rgba(211, 140, 159, 0.11);
+
+  /* ------------------------------
+     VARIABLES ANTERIORES
+     Mantienen los fondos existentes
+     mientras se renueva la web
+  ------------------------------ */
+
+  --color-principal: var(--color-ivory);
+  --color-principal-claro: var(--color-cream);
+  --color-secundario: var(--color-blue);
+  --color-detalle: var(--color-burgundy);
+  --color-detalle-claro: var(--color-burgundy-light);
+  --color-parrafo: var(--color-text-primary);
+  --color-navbar: var(--color-blue);
+
+  --bg-hero-1: var(--bg-primary);
+  --bg-hero-2: var(--bg-secondary);
+  --bg-white: var(--bg-surface);
+  --bg-arena: var(--bg-secondary);
+  --bg-arenaoscuro: var(--bg-highlight);
+  --bg-beigearenasuave: var(--bg-secondary);
+  --bg-blancocalidomafil: var(--bg-primary);
+
+  /* ------------------------------
+     ROLES DE COLOR
+  ------------------------------ */
+
+  --title: var(--color-text-primary);
+  --text: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --accent: var(--color-burgundy);
+
+  --link: var(--color-blue);
+  --link-hover: var(--color-blue-hover);
+
+  --icon: var(--color-blue);
+  --icon-highlight: var(--color-burgundy);
+
+  /* ------------------------------
+     BOTONES
+  ------------------------------ */
+
+  --btn-primary: var(--color-blue);
+  --btn-primary-hover: var(--color-blue-hover);
+  --btn-primary-text: var(--color-white);
+
+  --btn-secondary: var(--color-burgundy);
+  --btn-secondary-hover: var(--color-burgundy-hover);
+  --btn-secondary-text: var(--color-white);
+
+  --btn-tertiary: var(--color-cream);
+  --btn-tertiary-hover: var(--color-sand);
+  --btn-tertiary-text: var(--color-blue);
+
+  --btn-light: var(--color-white);
+  --btn-light-hover: var(--color-cream);
+  --btn-light-text: var(--color-blue);
+
+  /* ------------------------------
+     BORDES
+  ------------------------------ */
+
+  --border: rgba(20, 70, 117, 0.2);
+  --border-color: var(--color-border);
+  --border-blue: rgba(20, 70, 117, 0.2);
+  --border-burgundy: rgba(149, 61, 84, 0.2);
+
+  --radius-small: 10px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+
+  /* ------------------------------
+     SOMBRAS
+  ------------------------------ */
+
+  --shadow-small: 0 4px 14px rgba(34, 54, 73, 0.06);
+
+  --shadow-medium: 0 10px 30px rgba(34, 54, 73, 0.08);
+
+  --shadow-large: 0 20px 50px rgba(34, 54, 73, 0.1);
+
+  --shadow-blue: 0 12px 30px rgba(20, 70, 117, 0.12);
+
+  --shadow-burgundy: 0 12px 30px rgba(149, 61, 84, 0.12);
+
+  /* ------------------------------
+     DEGRADADOS
+  ------------------------------ */
+
+  --gradient-neutral: linear-gradient(
+    135deg,
+    var(--color-ivory) 0%,
+    var(--color-cream) 100%
+  );
+
+  --gradient-blue: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-blue-light) 100%
+  );
+
+  --gradient-burgundy: linear-gradient(
+    135deg,
+    var(--color-burgundy) 0%,
+    var(--color-burgundy-light) 100%
+  );
+
+  --gradient-soft: linear-gradient(
+    135deg,
+    rgba(62, 110, 156, 0.08) 0%,
+    rgba(211, 140, 159, 0.09) 100%
+  );
+
+  /* ------------------------------
+     TIPOGRAFÍAS
+  ------------------------------ */
+
+ --font-title: "Bebas Neue", sans-serif;
+
+  --font-text:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  /* Compatibilidad con nombres anteriores */
+
+  --font-subtitle: var(--font-text);
+
+  /* ------------------------------
+     TRANSICIONES
+  ------------------------------ */
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 280ms ease;
+  --transition-slow: 420ms ease;
+}
+
+/* ==============================
+   BODY
+============================== */
+
 body {
   font-family: var(--font-text);
-  background: transparent;
-  color: var(--title);
+  background-color: var(--bg-primary);
+  color: var(--color-text-primary);
   line-height: 1.6;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Títulos principales */
-h1 {
-  font-family: var(--font-title);
-  color: var(--title);
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
 }
 
-/* Subtítulos */
+/* ==============================
+   TÍTULOS
+============================== */
+
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-subtitle);
   color: var(--title);
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
-/* Texto descriptivo */
+h1{
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    font-weight: 400;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    line-height: .95;
+    color: var(--title);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-text);
+  font-weight: 700;
+}
+
+h2 {
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}
+
+/* ==============================
+   TEXTOS
+============================== */
+
 p {
   font-family: var(--font-text);
-  color: var(--text);
+  color: var(--color-text-secondary);
 }
 
-/* Links */
+strong,
+b {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+small {
+  color: var(--color-text-secondary);
+}
+
+/* ==============================
+   LINKS
+============================== */
+
 a {
+  color: var(--link);
   text-decoration: none;
-  color: inherit;
+  transition:
+    color var(--transition-fast),
+    opacity var(--transition-fast);
 }
 
-/* Listas */
-ul {
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid rgba(20, 70, 117, 0.18);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ==============================
+   LISTAS
+============================== */
+
+ul,
+ol {
   list-style: none;
 }
 
-/* Media */
+/* ==============================
+   MULTIMEDIA
+============================== */
+
 img,
-video {
-  max-width: 100%;
+picture,
+video,
+canvas,
+svg {
   display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* ==============================
+   BOTONES
+============================== */
+
+button {
+  font-family: var(--font-text);
+  border: none;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(20, 70, 117, 0.18);
+  outline-offset: 3px;
+}
+
+/* ==============================
+   FORMULARIOS
+============================== */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  color: var(--color-text-primary);
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-small);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(20, 70, 117, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(114, 110, 105, 0.7);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==============================
+   FONDOS PARA SECCIONES
+============================== */
+
+.section-primary {
+  background-color: var(--bg-primary);
+}
+
+.section-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.section-highlight {
+  background-color: var(--bg-highlight);
+}
+
+.section-white {
+  background-color: var(--bg-surface);
+}
+
+.section-blue-soft {
+  background-color: var(--bg-blue-soft);
+}
+
+.section-burgundy-soft {
+  background-color: var(--bg-burgundy-soft);
+}
+
+.section-gradient {
+  background: var(--gradient-neutral);
+}
+
+/* ==============================
+   TARJETAS GENERALES
+============================== */
+
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-small);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(20, 70, 117, 0.16);
+}
+
+/* ==============================
+   SELECCIÓN DE TEXTO
+============================== */
+
+::selection {
+  color: var(--color-text-primary);
+  background-color: rgba(211, 140, 159, 0.35);
+}
+
+/* ==============================
+   SCROLLBAR
+============================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(20, 70, 117, 0.35);
+  border: 3px solid var(--bg-secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(20, 70, 117, 0.55);
+}
+
+/* ==============================
+   ACCESIBILIDAD
+============================== */
+
+:focus-visible {
+  scroll-margin-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

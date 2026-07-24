@@ -10,26 +10,26 @@
   isolation: isolate;
 }
 
-/* Fondo diagonal semitransparente encima del parallax */
+/* 
+  Dos capas marfil sobre la fotografía.
+  Se mantiene la división diagonal, pero sin el bloque azul.
+*/
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
 
-background: linear-gradient(
-  115deg,
-  rgba(246, 235, 235, 0.85) 0%,
-  rgba(246, 235, 235, 0.85) 46%,  /* claro */
-  
-  rgba(246, 235, 235, 0.7) 48%,   /* transición empieza */
-  rgba(15, 55, 95, 0.7) 52%,      /* transición termina */
-  
-  rgba(15, 55, 95, 0.85) 54%,     /* azul sólido */
-  rgba(15, 55, 95, 0.85) 100%
-);
+  background: linear-gradient(
+    115deg,
+    rgba(250, 249, 247, 0.93) 0%,
+    rgba(250, 249, 247, 0.93) 47%,
+    rgba(245, 243, 240, 0.84) 51%,
+    rgba(245, 243, 240, 0.84) 100%
+  );
 }
-/* Sacamos la imagen local del hero */
+
+/* La fotografía continúa viniendo del fondo/parallax exterior */
 .hero::after {
   content: none;
 }
@@ -41,107 +41,169 @@ background: linear-gradient(
   z-index: 1;
 }
 
-/* Columna izquierda */
+/* ==============================
+   COLUMNA IZQUIERDA
+============================== */
+
 .hero-content {
   flex: 1;
-  max-width: 620px;
+  max-width: 650px;
 }
 
 .hero-content h1 {
   font-family: var(--font-title);
-  font-size: clamp(2.7rem, 5.4vw, 4.7rem);
-  line-height: 1.08;
-  letter-spacing: 0.7px;
-  margin-top: -8rem;
-  margin-bottom: 4.5rem;
-  color: var(--color-detalle);
+  font-size: clamp(3rem, 5.8vw, 5.2rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+  color: var(--color-blue);
+  text-transform: uppercase;
+}
+
+/* Solamente la palabra "para" */
+.hero-title-accent {
+  color: var(--color-burgundy);
 }
 
 .hero-content p {
   font-family: var(--font-text);
   font-size: 1.15rem;
   max-width: 520px;
-  color: var(--color-secundario);
-  opacity: 0.95;
+  color: var(--color-text-primary);
+  line-height: 1.7;
 }
 
-/* Columna derecha */
+/* ==============================
+   COLUMNA DERECHA
+============================== */
+
 .hero-right-text {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.85rem;
   text-align: right;
 }
 
+/* Recuadros sólidos para mejorar la lectura */
 .hero-right-text span {
-  font-family: var(--font-subtitle);
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
-  line-height: 1.05;
-  color: var(--color-principal);
-  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 380px;
+  gap: 0.9rem;
+  padding: 0.85rem 1.4rem;
+
+  font-family: "Trocchi", serif;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--color-blue);
+  background-color: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-small);
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
-/* Botón inferior centrado */
+.hero-icon {
+  color: var(--color-burgundy);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+
+
+.hero-right-text span:hover {
+  transform: translateY(-3px);
+  border-color: rgba(20, 70, 117, 0.22);
+  box-shadow: var(--shadow-medium);
+}
+
+
+
+
+
+/* ==============================
+   BOTÓN INFERIOR
+============================== */
+
 .hero-budget-btn {
   position: absolute;
   left: 50%;
   bottom: 3.1rem;
   transform: translateX(-50%);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1.15rem 2.2rem;
+
   min-width: 255px;
-  border-radius: 999px;
-  background-color: var(--color-detalle);
-  color: #fff;
+  padding: 1.05rem 2.2rem;
+
+  border-radius: var(--radius-medium);
+  background-color: var(--color-blue);
+  color: var(--color-white);
+
   font-family: var(--font-text);
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  box-shadow: 0 12px 28px rgba(149, 61, 84, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
-    background-color 0.25s ease;
+  letter-spacing: 0.01em;
+
+  box-shadow: var(--shadow-blue);
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    background-color var(--transition-normal);
 }
 
 .hero-budget-btn:hover {
-  transform: translateX(-50%) translateY(-2px);
-  box-shadow: 0 16px 34px rgba(149, 61, 84, 0.35);
+  transform: translateX(-50%) translateY(-3px);
+  background-color: var(--color-blue-hover);
+  color: var(--color-white);
+  box-shadow: 0 16px 34px rgba(20, 70, 117, 0.22);
 }
 
+/* ==============================
+   TABLET
+============================== */
 
-
-@keyframes scrollHint {
-  0% {
-    transform: rotate(45deg) translateY(0);
-    opacity: 0.45;
-  }
-  50% {
-    transform: rotate(45deg) translateY(6px);
-    opacity: 0.9;
-  }
-  100% {
-    transform: rotate(45deg) translateY(0);
-    opacity: 0.45;
-  }
-}
-
-
-
-/* Tablet */
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 6rem 1.8rem 7rem;
+    padding: 7rem 1.8rem 8rem;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      155deg,
+      rgba(250, 249, 247, 0.94) 0%,
+      rgba(250, 249, 247, 0.94) 53%,
+      rgba(245, 243, 240, 0.86) 58%,
+      rgba(245, 243, 240, 0.86) 100%
+    );
   }
 
   .hero-content {
     max-width: 760px;
+  }
+
+  .hero-content h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
 
   .hero-content p {
@@ -151,36 +213,49 @@ background: linear-gradient(
   .hero-right-text {
     align-items: center;
     text-align: center;
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
   }
 
   .hero-right-text span {
-    color: #ffffff;
+    width: 380px;  
+  justify-content: center;
+}
+
+  .hero-right-text span:nth-child(2) {
+    transform: none;
+  }
+
+  .hero-right-text span:nth-child(2):hover {
+    transform: translateY(-3px);
   }
 }
 
-/* Mobile */
+/* ==============================
+   MOBILE
+============================== */
+
 @media (max-width: 768px) {
   .hero {
     min-height: 92vh;
-    padding: 6.4rem 1.2rem 7.4rem;
-    gap: 1.4rem;
+    padding: 6.7rem 1.2rem 8rem;
+    gap: 1.5rem;
   }
 
-.hero::before {
-  background: linear-gradient(
-    155deg,
-    rgba(246, 235, 235, 0.85) 0%,
-    rgba(246, 235, 235, 0.85) 52%,
-    rgba(15, 55, 95, 0.85) 58%,
-    rgba(15, 55, 95, 0.85) 100%
-  );
-}
+  .hero::before {
+    background: linear-gradient(
+      160deg,
+      rgba(250, 249, 247, 0.95) 0%,
+      rgba(250, 249, 247, 0.95) 55%,
+      rgba(245, 243, 240, 0.88) 61%,
+      rgba(245, 243, 240, 0.88) 100%
+    );
+  }
 
   .hero-content h1 {
-    font-size: 2.4rem;
-    line-height: 1.08;
-    margin-top: -0.3rem;
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
 
   .hero-content p {
@@ -189,54 +264,57 @@ background: linear-gradient(
   }
 
   .hero-right-text {
-    gap: 0.35rem;
+    width: 100%;
+    gap: 0.65rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.2rem;
   }
 
   .hero-right-text span {
-    font-size: 1.8rem;
+    width: min(100%, 340px);
+    min-width: 0;
+    padding: 0.8rem 1rem;
+    font-size: 1.05rem;
   }
 
   .hero-budget-btn {
-    bottom: 4.8rem;
-    padding: 1rem 1.8rem;
+    bottom: 3.5rem;
     min-width: 225px;
+    padding: 0.95rem 1.7rem;
     font-size: 0.98rem;
   }
 }
 
-/* Mobile chico */
+/* ==============================
+   MOBILE CHICO
+============================== */
+
 @media (max-width: 480px) {
   .hero {
     min-height: 100vh;
-    padding: 6rem 1rem 7rem;
+    padding: 6.2rem 1rem 8rem;
   }
 
   .hero-content h1 {
-    font-size: 2.50rem;
-    margin-top: -0.1rem;
+    font-size: 2.75rem;
   }
 
   .hero-content p {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
 
   .hero-right-text {
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-right-text span {
-    font-size: 1.45rem;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .hero-budget-btn {
-    bottom: 4.6rem;
+    bottom: 3.3rem;
     min-width: 210px;
-    font-size: 0.95rem;
+    font-size: 0.94rem;
   }
 }
-
-
-
-
-
