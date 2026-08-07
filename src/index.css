@@ -32,7 +32,12 @@ body {
 
 .app-bg-parallax {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
   z-index: 0;
   pointer-events: none;
 
@@ -43,8 +48,24 @@ body {
   background-color: #223649;
 }
 
+/* ==============================
+   MOBILE
+============================== */
+
 @media (max-width: 768px) {
   .app-bg-parallax {
     background-image: url("/assets/imagenfondo-mobile.png");
+
+    /*
+      La capa se hace un poco más alta que la pantalla
+      para evitar el efecto de zoom/reacomodo cuando
+      aparecen o desaparecen las barras del navegador.
+    */
+    top: -5vh;
+    height: 110svh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
