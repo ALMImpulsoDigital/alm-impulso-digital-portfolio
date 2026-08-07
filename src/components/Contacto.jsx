@@ -24,16 +24,6 @@ export default function Contacto() {
           Contanos qué necesitás y veamos cómo podemos impulsarlo.
         </p>
 
-        <a
-          className="contacto-cta"
-          href={enlaceWhatsApp}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaWhatsapp aria-hidden="true" />
-          Escribinos por WhatsApp
-        </a>
-
         <div className="contacto-grid">
           <article className="contacto-block contacto-block-whatsapp">
             <div className="contacto-icon contacto-icon-whatsapp">
