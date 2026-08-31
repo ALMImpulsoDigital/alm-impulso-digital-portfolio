@@ -1,11 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppFlotante from "./components/WhatsAppFlotante";
-
 import Home from "./pages/Home";
 import Proyectos from "./components/Proyectos";
-
 import ScrollToHash from "./components/ScrollToHash";
 
 export default function App() {
@@ -19,7 +18,18 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/proyectos/:categoria" element={<Proyectos />} />
+
+          <Route
+            path="/proyectos/web"
+            element={<Proyectos categoriaFija="web" />}
+          />
+
+          <Route
+            path="/proyectos/mobile"
+            element={<Proyectos categoriaFija="mobile" />}
+          />
+
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
         <Footer />

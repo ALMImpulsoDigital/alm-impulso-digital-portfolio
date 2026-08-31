@@ -4,23 +4,23 @@ import "../styles/proyectosSection.css";
 export default function ProyectosSection() {
   return (
     <section className="proyectos-section" id="proyectos">
+      <h2 className="proyectos-titulo">
+        Proyectos de Desarrollo Web y Aplicaciones Móviles
+      </h2>
+
       <div className="proyectos-franja">
         <div className="proyectos-mitad proyectos-mitad-web">
           <div className="proyecto-content">
             <img
               src="/assets/iconopc.png"
-              alt="web"
+              alt="Proyectos de desarrollo web"
               className="proyecto-icono"
             />
 
-            <h3>
-              PROYECTOS
-              <br />
-              WEB
-            </h3>
+            <h3>Proyectos Web</h3>
 
             <Link to="/proyectos/web" className="proyecto-boton">
-              Ver más →
+              Ver proyectos →
             </Link>
           </div>
         </div>
@@ -29,18 +29,14 @@ export default function ProyectosSection() {
           <div className="proyecto-content">
             <img
               src="/assets/iconocel.png"
-              alt="mobile"
+              alt="Proyectos de aplicaciones móviles"
               className="proyecto-icono"
             />
 
-            <h3>
-              APLICACIONES
-              <br />
-              MÓVILES
-            </h3>
+            <h3>Aplicaciones Móviles</h3>
 
             <Link to="/proyectos/mobile" className="proyecto-boton">
-              Ver más →
+              Ver proyectos →
             </Link>
           </div>
         </div>

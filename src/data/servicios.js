@@ -14,7 +14,7 @@ export const servicios = [
   },
   {
     id: "onepage",
-    titulo: "One Page",
+    titulo: "Sitio Web - One Page",
     subtitulo: "Tu marca completa en una sola página, elegante y directa",
     paraQueSirve:
       "Perfecta para presentar quién sos, qué hacés, tu portfolio y contacto sin navegar a otras páginas. Muy usada en portfolios y estudios.",
@@ -30,7 +30,7 @@ export const servicios = [
     subtitulo: "Sitio profesional con varias páginas para tu negocio",
     paraQueSirve:
       "Para empresas o marcas que necesitan estructura: Home, servicios, nosotros, clientes, blog, contacto. Refuerza confianza y posicionamiento.",
-    incluye: ["Navegación por secciones", "Páginas internas", "SEO básico", "Optimización de performance"],
+    incluye: ["Navegación por secciones", "Páginas internas", "Optimización técnica para buscadores", "Optimización de performance"],
     ejemplo: "Ejemplo: estudio contable, inmobiliaria, consultora, comercio local.",
     thumbnail: "/assets/servicios/WebCoorporativa.png",
     vimeoId: "1156856122",
@@ -41,8 +41,13 @@ export const servicios = [
     titulo: "Sistema Web con Base de Datos",
     subtitulo: "Gestión completa: admin + usuarios + datos en tiempo real",
     paraQueSirve:
-      "Cuando tu negocio necesita un sistema (no solo una web): reservas, turnos, pedidos, stock, clientes, panel administrador y reportes.",
-    incluye: ["ABM/CRUD", "Panel admin", "Roles (admin/usuario)", "API + BD (SQL/Firebase)"],
+      "Ideal para negocios que necesitan organizar y automatizar su gestión mediante un sistema a medida: reservas, turnos, pedidos, stock, clientes, panel administrador y reportes.",
+    incluye: [
+  "Panel de administración",
+  "Gestión de usuarios y permisos",
+  "Base de datos",
+  "Reportes y gestión de información"
+],
     ejemplo: "Ejemplo: reservas de canchas, taller mecánico, catálogo con gestión, turnos.",
     thumbnail: "/assets/servicios/SistemaWeb.png",
     vimeoId: "1156856106",

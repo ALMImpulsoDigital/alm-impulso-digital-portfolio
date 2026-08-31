@@ -19,9 +19,15 @@ export default function Contacto() {
         <h2 className="contacto-title">Contacto</h2>
 
         <p className="contacto-text">
-          ¿Tenés una idea o proyecto en mente?
+          ¿Necesitás una página web, un sistema de gestión o una aplicación a
+          medida?
           <br />
-          Contanos qué necesitás y veamos cómo podemos impulsarlo.
+          Contanos tu proyecto y evaluemos juntos la solución digital más
+          adecuada.
+        </p>
+        <p className="contacto-location">
+          Trabajamos con emprendedores, profesionales y empresas de Córdoba y
+          otras localidades.
         </p>
 
         <div className="contacto-grid">

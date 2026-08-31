@@ -6,6 +6,26 @@
   background: transparent;
 }
 
+.proyectos-titulo {
+  margin: 0;
+  padding: 1.6rem 1.5rem 1.4rem;
+
+  text-align: center;
+
+  font-family: var(--font-text);
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+
+  color: var(--color-blue);
+  background: linear-gradient(
+  180deg,
+  rgba(250, 249, 247, 0.72) 0%,
+  rgba(250, 249, 247, 0.86) 100%
+);
+}
+
 .proyectos-franja {
   position: relative;
   display: flex;
@@ -106,6 +126,12 @@
 }
 
 @media (max-width: 768px) {
+
+  .proyectos-titulo {
+    padding: 1.6rem 1rem 1.3rem;
+    font-size: 1.6rem;
+  }
+
   .proyectos-franja {
     min-height: 190px;
   }
@@ -135,6 +161,12 @@
 }
 
 @media (max-width: 480px) {
+
+  .proyectos-titulo {
+    padding: 1.4rem 1rem 1.1rem;
+    font-size: 1.35rem;
+  }
+
   .proyectos-franja {
     min-height: 250px;
   }

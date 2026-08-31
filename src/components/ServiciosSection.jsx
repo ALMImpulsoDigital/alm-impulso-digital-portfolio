@@ -9,7 +9,7 @@ export default function ServiciosSection() {
     <section className="servicios-section" id="servicios">
       <div className="servicios-container">
         <div className="servicios-header">
-          <h2>Servicios</h2>
+          <h2>Servicios de Desarrollo de Software</h2>
 
           <ul className="servicios-features">
             <li>🚀 Tecnologías modernas</li>
@@ -21,9 +21,10 @@ export default function ServiciosSection() {
           </ul>
 
           <p className="servicios-intro">
-            Desde páginas de presentación hasta sistemas completos y apps
-            móviles. Cada proyecto se diseña de forma personalizada, con foco en
-            imagen, funcionalidad y resultados.
+            Desarrollamos páginas web, sistemas de gestión y aplicaciones
+            móviles a medida para emprendedores, profesionales y empresas. Cada
+            proyecto se diseña de forma personalizada, con foco en
+            funcionalidad, imagen y resultados.
           </p>
         </div>
 

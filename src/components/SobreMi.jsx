@@ -7,11 +7,13 @@ export default function SobreMi() {
         <h2>Sobre mí</h2>
 
         <p className="sobremi-text">
-          Mi nombre es Ana, me recibí como Desarrolladora de la carrera de
-          Desarrollo Web y Aplicaciones Móviles. Me apasiona crear sitios web y
-          aplicaciones modernas, funcionales y con una excelente experiencia de
-          usuario. Disfruto enfrentar nuevos desafíos y seguir aprendiendo para
-          crecer profesionalmente.
+          <p className="sobremi-text">
+            Soy Ana, desarrolladora especializada en desarrollo web, sistemas y
+            aplicaciones móviles. Creo soluciones digitales a medida para
+            emprendedores, profesionales y empresas, combinando diseño,
+            funcionalidad y tecnología para resolver necesidades reales de cada
+            negocio.
+          </p>
         </p>
       </div>
     </section>

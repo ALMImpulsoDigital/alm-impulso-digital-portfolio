@@ -7,18 +7,22 @@ export default function CardProyecto({ proyecto }) {
 
   return (
     <>
-      <div className="proyecto-card">
+      <article className="proyecto-card">
         <div className="media media-clickable" onClick={() => setOpen(true)}>
           <img
             src={proyecto.thumbnail}
             alt={proyecto.titulo}
             className="thumb"
+            loading="lazy"
           />
-          <div className="play-btn">▶</div>
+
+          <div className="play-btn" aria-hidden="true">
+            ▶
+          </div>
         </div>
 
         <div className="contenido">
-          <h3>{proyecto.titulo}</h3>
+          <h2>{proyecto.titulo}</h2>
 
           <p className={`descripcion ${expandido ? "expandida" : ""}`}>
             {proyecto.descripcion}
@@ -28,6 +32,7 @@ export default function CardProyecto({ proyecto }) {
             <button
               className="leer-mas"
               onClick={() => setExpandido(!expandido)}
+              aria-expanded={expandido}
             >
               {expandido ? "Leer menos" : "Leer más"}
             </button>
@@ -39,7 +44,7 @@ export default function CardProyecto({ proyecto }) {
             ))}
           </div>
         </div>
-      </div>
+      </article>
 
       {open && (
         <VideoModal

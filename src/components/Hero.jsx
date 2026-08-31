@@ -14,8 +14,8 @@ export default function Hero() {
         </h1>
 
         <p>
-          Desarrollo web y aplicaciones a medida. Sistemas reales, escalables y
-          profesionales.
+          Desarrollo de páginas web, sistemas de gestión y aplicaciones a medida
+          para emprendedores, profesionales y empresas.
         </p>
       </div>
 
