@@ -18,7 +18,7 @@ export default function Home() {
 
     logo: "https://almimpulsodigital.com/assets/logoalm.png",
 
-    image: "https://almimpulsodigital.com/assets/logoalm.png",
+    image: "https://almimpulsodigital.com/assets/alm-social-share.png",
 
     description:
       "Desarrollo de páginas web, sistemas de gestión, aplicaciones y soluciones digitales a medida para emprendedores, profesionales y empresas.",
@@ -45,41 +45,57 @@ export default function Home() {
 
     hasOfferCatalog: {
       "@type": "OfferCatalog",
+
       name: "Servicios de ALM Impulso Digital",
 
       itemListElement: [
         {
           "@type": "Offer",
+
           itemOffered: {
             "@type": "Service",
+
             name: "Desarrollo de páginas web",
+
             description:
               "Diseño y desarrollo de páginas web profesionales y personalizadas para emprendedores, profesionales y empresas.",
           },
         },
+
         {
           "@type": "Offer",
+
           itemOffered: {
             "@type": "Service",
+
             name: "Sistemas de gestión a medida",
+
             description:
               "Desarrollo de sistemas personalizados para organizar, automatizar y optimizar procesos de negocios.",
           },
         },
+
         {
           "@type": "Offer",
+
           itemOffered: {
             "@type": "Service",
+
             name: "Desarrollo de aplicaciones móviles",
+
             description:
               "Desarrollo de aplicaciones móviles personalizadas e integradas con sistemas, APIs y bases de datos.",
           },
         },
+
         {
           "@type": "Offer",
+
           itemOffered: {
             "@type": "Service",
+
             name: "Tiendas online y e-commerce",
+
             description:
               "Desarrollo de tiendas online y soluciones de comercio electrónico adaptadas a cada negocio.",
           },
@@ -91,6 +107,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
+        {/* SEO */}
+
         <title>
           Desarrollo de Software a Medida en Córdoba | ALM Impulso Digital
         </title>
@@ -103,6 +121,7 @@ export default function Home() {
         <link rel="canonical" href="https://almimpulsodigital.com/" />
 
         {/* Open Graph */}
+
         <meta property="og:type" content="website" />
 
         <meta
@@ -122,11 +141,21 @@ export default function Home() {
           content="https://almimpulsodigital.com/assets/alm-social-share.png"
         />
 
+        <meta property="og:image:width" content="1200" />
+
+        <meta property="og:image:height" content="630" />
+
+        <meta
+          property="og:image:alt"
+          content="ALM Impulso Digital - Desarrollo de páginas web, sistemas y aplicaciones"
+        />
+
         <meta property="og:site_name" content="ALM Impulso Digital" />
 
         <meta property="og:locale" content="es_AR" />
 
         {/* Twitter / X */}
+
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
@@ -144,16 +173,28 @@ export default function Home() {
           content="https://almimpulsodigital.com/assets/alm-social-share.png"
         />
 
+        <meta
+          name="twitter:image:alt"
+          content="ALM Impulso Digital - Desarrollo de páginas web, sistemas y aplicaciones"
+        />
+
+        {/* Datos estructurados */}
+
         <script type="application/ld+json">
           {JSON.stringify(schemaOrganization)}
         </script>
       </Helmet>
 
       <Hero />
+
       <ServiciosSection />
+
       <TecnologiasSection />
+
       <ProyectosSection />
+
       <SobreMi />
+
       <Contacto />
     </>
   );
