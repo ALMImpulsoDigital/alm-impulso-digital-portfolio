@@ -18,6 +18,8 @@ export default function Home() {
 
     logo: "https://almimpulsodigital.com/assets/logoalm.png",
 
+    image: "https://almimpulsodigital.com/assets/logoalm.png",
+
     description:
       "Desarrollo de páginas web, sistemas de gestión, aplicaciones y soluciones digitales a medida para emprendedores, profesionales y empresas.",
 
@@ -99,6 +101,48 @@ export default function Home() {
         />
 
         <link rel="canonical" href="https://almimpulsodigital.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+
+        <meta
+          property="og:title"
+          content="Desarrollo de Software a Medida en Córdoba | ALM Impulso Digital"
+        />
+
+        <meta
+          property="og:description"
+          content="Desarrollo de páginas web, sistemas de gestión, aplicaciones y soluciones digitales a medida para emprendedores, profesionales y empresas."
+        />
+
+        <meta property="og:url" content="https://almimpulsodigital.com/" />
+
+        <meta
+          property="og:image"
+          content="https://almimpulsodigital.com/assets/alm-social-share.png"
+        />
+
+        <meta property="og:site_name" content="ALM Impulso Digital" />
+
+        <meta property="og:locale" content="es_AR" />
+
+        {/* Twitter / X */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Desarrollo de Software a Medida en Córdoba | ALM Impulso Digital"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Desarrollo de páginas web, sistemas de gestión, aplicaciones y soluciones digitales a medida para emprendedores, profesionales y empresas."
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://almimpulsodigital.com/assets/alm-social-share.png"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify(schemaOrganization)}
