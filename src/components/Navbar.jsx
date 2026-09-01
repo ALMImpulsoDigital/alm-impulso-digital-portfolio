@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo" onClick={cerrarMenu}>
-        <img src="/assets/logo.png" alt="ALM Impulso Digital" />
+        <img src="/assets/logo-alm.webp" alt="ALM Impulso Digital" />
       </Link>
 
       <button
