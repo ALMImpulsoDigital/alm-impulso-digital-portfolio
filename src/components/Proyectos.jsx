@@ -50,15 +50,11 @@ export default function Proyectos({ categoriaFija }) {
   return (
     <>
       <Helmet>
-        {/* SEO */}
-
         <title>{seoTitle}</title>
 
         <meta name="description" content={seoDescription} />
 
         <link rel="canonical" href={canonicalUrl} />
-
-        {/* Open Graph */}
 
         <meta property="og:type" content="website" />
 
@@ -83,8 +79,6 @@ export default function Proyectos({ categoriaFija }) {
 
         <meta property="og:locale" content="es_AR" />
 
-        {/* Twitter / X */}
-
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta name="twitter:title" content={seoTitle} />
@@ -99,7 +93,7 @@ export default function Proyectos({ categoriaFija }) {
         />
       </Helmet>
 
-      <section className={`proyectos-page ${categoria || ""}`}>
+      <main className={`proyectos-page ${categoria || ""}`}>
         <div className="proyectos" id="proyectos">
           <div className="proyectos-top">
             <Link to="/" className="volver-link">
@@ -117,7 +111,7 @@ export default function Proyectos({ categoriaFija }) {
             ))}
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 }

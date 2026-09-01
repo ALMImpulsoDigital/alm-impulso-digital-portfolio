@@ -1,17 +1,25 @@
 import { useState } from "react";
+
 import "../styles/navbar.css";
+
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const cerrarMenu = () => setMenuOpen(false);
+
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo" onClick={cerrarMenu}>
-        <img src="/assets/logo-alm.webp" alt="ALM Impulso Digital" />
+        <img
+          src="/assets/logo-alm.webp"
+          alt="ALM Impulso Digital"
+          width="400"
+          height="160"
+        />
       </Link>
 
       <button
@@ -32,11 +40,13 @@ export default function Navbar() {
             Servicios
           </Link>
         </li>
+
         <li>
           <Link to="/#proyectos" onClick={cerrarMenu}>
             Proyectos
           </Link>
         </li>
+
         <li>
           <Link to="/#contacto" onClick={cerrarMenu}>
             Contacto

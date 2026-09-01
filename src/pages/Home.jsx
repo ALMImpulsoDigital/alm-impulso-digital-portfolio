@@ -16,7 +16,7 @@ export default function Home() {
 
     url: "https://almimpulsodigital.com/",
 
-    logo: "https://almimpulsodigital.com/assets/logoalm.png",
+    logo: "https://almimpulsodigital.com/assets/logo-alm.webp",
 
     image: "https://almimpulsodigital.com/assets/alm-social-share.png",
 
@@ -107,8 +107,6 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        {/* SEO */}
-
         <title>
           Desarrollo de Software a Medida en Córdoba | ALM Impulso Digital
         </title>
@@ -119,8 +117,6 @@ export default function Home() {
         />
 
         <link rel="canonical" href="https://almimpulsodigital.com/" />
-
-        {/* Open Graph */}
 
         <meta property="og:type" content="website" />
 
@@ -154,8 +150,6 @@ export default function Home() {
 
         <meta property="og:locale" content="es_AR" />
 
-        {/* Twitter / X */}
-
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
@@ -178,24 +172,19 @@ export default function Home() {
           content="ALM Impulso Digital - Desarrollo de páginas web, sistemas y aplicaciones"
         />
 
-        {/* Datos estructurados */}
-
         <script type="application/ld+json">
           {JSON.stringify(schemaOrganization)}
         </script>
       </Helmet>
 
-      <Hero />
-
-      <ServiciosSection />
-
-      <TecnologiasSection />
-
-      <ProyectosSection />
-
-      <SobreMi />
-
-      <Contacto />
+      <main>
+        <Hero />
+        <ServiciosSection />
+        <TecnologiasSection />
+        <ProyectosSection />
+        <SobreMi />
+        <Contacto />
+      </main>
     </>
   );
 }

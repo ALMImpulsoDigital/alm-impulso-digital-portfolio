@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import { servicios } from "../data/servicios";
+
 import "../styles/serviciosSection.css";
 
 export default function ServiciosSection() {
@@ -37,6 +39,8 @@ export default function ServiciosSection() {
                   alt={servicio.titulo}
                   loading="lazy"
                   decoding="async"
+                  width={servicio.width}
+                  height={servicio.height}
                 />
               </div>
 
@@ -82,6 +86,8 @@ export default function ServiciosSection() {
                 src={servicioActivo.thumbnail}
                 alt={servicioActivo.titulo}
                 decoding="async"
+                width={servicioActivo.width}
+                height={servicioActivo.height}
               />
             </div>
 

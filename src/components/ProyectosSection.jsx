@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import "../styles/proyectosSection.css";
 
 export default function ProyectosSection() {
@@ -16,12 +17,15 @@ export default function ProyectosSection() {
               alt="Proyectos de desarrollo web"
               className="proyecto-icono"
               loading="lazy"
+              decoding="async"
+              width="420"
+              height="280"
             />
 
             <h3>Proyectos Web</h3>
 
             <Link to="/proyectos/web" className="proyecto-boton">
-              Ver proyectos →
+              Ver proyectos web →
             </Link>
           </div>
         </div>
@@ -33,12 +37,15 @@ export default function ProyectosSection() {
               alt="Proyectos de aplicaciones móviles"
               className="proyecto-icono"
               loading="lazy"
+              decoding="async"
+              width="420"
+              height="280"
             />
 
             <h3>Aplicaciones Móviles</h3>
 
             <Link to="/proyectos/mobile" className="proyecto-boton">
-              Ver proyectos →
+              Ver aplicaciones móviles →
             </Link>
           </div>
         </div>
