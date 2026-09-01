@@ -1,4 +1,5 @@
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaInstagram, FaGlobe } from "react-icons/fa";
+
 import "../styles/contacto.css";
 
 export default function Contacto() {
@@ -14,98 +15,124 @@ export default function Contacto() {
   return (
     <section className="contacto" id="contacto">
       <div className="contacto-inner">
-        <span className="contacto-eyebrow">Hablemos</span>
+        <div className="contacto-header">
+          <span className="contacto-eyebrow">Hablemos</span>
 
-        <h2 className="contacto-title">Contacto</h2>
+          <h2 className="contacto-title">¿Tenés un proyecto en mente?</h2>
 
-        <p className="contacto-text">
-          ¿Necesitás una página web, un sistema de gestión o una aplicación a
-          medida?
-          <br />
-          Contanos tu proyecto y evaluemos juntos la solución digital más
-          adecuada.
-        </p>
-        <p className="contacto-location">
-          Trabajamos con emprendedores, profesionales y empresas de Córdoba y
-          otras localidades.
-        </p>
+          <p className="contacto-text">
+            Contanos qué necesitás y evaluemos juntos la solución digital más
+            adecuada para tu negocio.
+          </p>
+        </div>
 
-        <div className="contacto-grid">
-          <article className="contacto-block contacto-block-whatsapp">
-            <div className="contacto-icon contacto-icon-whatsapp">
-              <FaWhatsapp aria-hidden="true" />
-            </div>
+        <div className="contacto-panel">
+          {/* COLUMNA IZQUIERDA */}
 
-            <h3 className="contacto-subtitle">WhatsApp</h3>
+          <div className="contacto-presentacion">
+            <span className="contacto-small-title">ALM IMPULSO DIGITAL</span>
 
-            <p className="contacto-description">
-              Escribinos para hacer una consulta o pedir tu presupuesto.
+            <h3>Transformamos ideas y necesidades en soluciones digitales.</h3>
+
+            <p>
+              Desarrollamos páginas web, sistemas de gestión, aplicaciones
+              móviles y soluciones de software a medida para emprendedores,
+              profesionales y empresas.
+            </p>
+
+            <p className="contacto-zona">
+              Villa Carlos Paz · Córdoba · Argentina
             </p>
 
             <a
-              className="contacto-link"
               href={enlaceWhatsApp}
               target="_blank"
               rel="noopener noreferrer"
+              className="contacto-whatsapp-btn"
             >
-              Enviar mensaje
+              <FaWhatsapp aria-hidden="true" />
+              Pedí tu presupuesto
             </a>
-          </article>
+          </div>
 
-          <article className="contacto-block">
-            <div className="contacto-icon">
-              <span aria-hidden="true">@</span>
-            </div>
+          {/* COLUMNA DERECHA */}
 
-            <h3 className="contacto-subtitle">Email</h3>
+          <div className="contacto-datos">
+            <a
+              href={enlaceWhatsApp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contacto-dato"
+            >
+              <div className="contacto-dato-icon contacto-dato-whatsapp">
+                <FaWhatsapp aria-hidden="true" />
+              </div>
 
-            <p className="contacto-description">
-              También podés contactarnos por correo electrónico.
-            </p>
+              <div>
+                <span className="contacto-dato-label">WhatsApp</span>
+
+                <strong>+54 9 3541 67-8553</strong>
+
+                <small>Consultas y presupuestos</small>
+              </div>
+            </a>
 
             <a
-              className="contacto-link contacto-email"
               href="mailto:almimpulsodigital@gmail.com"
+              className="contacto-dato"
             >
-              almimpulsodigital@gmail.com
+              <div className="contacto-dato-icon">
+                <FaEnvelope aria-hidden="true" />
+              </div>
+
+              <div>
+                <span className="contacto-dato-label">Email</span>
+
+                <strong>almimpulsodigital@gmail.com</strong>
+
+                <small>Escribinos cuando quieras</small>
+              </div>
             </a>
-          </article>
 
-          <article className="contacto-block">
-            <div className="contacto-icon">
-              <span aria-hidden="true">+</span>
-            </div>
+            <a
+              href="https://www.instagram.com/alm.impulsodigital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contacto-dato"
+            >
+              <div className="contacto-dato-icon contacto-dato-instagram">
+                <FaInstagram aria-hidden="true" />
+              </div>
 
-            <h3 className="contacto-subtitle">Redes</h3>
+              <div>
+                <span className="contacto-dato-label">Instagram</span>
 
-            <p className="contacto-description">
-              Conocé nuestros proyectos y seguí las novedades de ALM.
-            </p>
+                <strong>@alm.impulsodigital</strong>
 
-            <div className="contacto-social">
-              <a
-                className="social-btn"
-                href="https://www.instagram.com/alm.impulsodigital/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram de ALM Impulso Digital"
-                title="Instagram"
-              >
-                <img src="/assets/instagram.svg" alt="" />
-              </a>
+                <small>Proyectos, novedades y trabajos</small>
+              </div>
+            </a>
 
-              <a
-                className="social-btn"
-                href="https://github.com/ALMImpulsoDigital"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub de ALM Impulso Digital"
-                title="GitHub"
-              >
-                <img src="/assets/github.svg" alt="" />
-              </a>
-            </div>
-          </article>
+            <a href="https://almimpulsodigital.com/" className="contacto-dato">
+              <div className="contacto-dato-icon">
+                <FaGlobe aria-hidden="true" />
+              </div>
+
+              <div>
+                <span className="contacto-dato-label">Sitio web</span>
+
+                <strong>almimpulsodigital.com</strong>
+
+                <small>Desarrollo de soluciones digitales</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div className="contacto-bottom">
+          <span>© 2026 ALM Impulso Digital</span>
+
+          <span>Páginas Web · Sistemas · Aplicaciones</span>
         </div>
       </div>
     </section>

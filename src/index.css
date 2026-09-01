@@ -41,7 +41,7 @@ body {
   z-index: 0;
   pointer-events: none;
 
-  background-image: url("/assets/imagenfondo.png");
+  background-image: url("/assets/imagenfondo.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ body {
 
 @media (max-width: 768px) {
   .app-bg-parallax {
-    background-image: url("/assets/imagenfondo-mobile.png");
+    background-image: url("/assets/imagenfondo-mobile.webp");
 
     /*
       La capa se hace un poco más alta que la pantalla

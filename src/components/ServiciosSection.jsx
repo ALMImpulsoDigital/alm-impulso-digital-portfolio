@@ -32,7 +32,12 @@ export default function ServiciosSection() {
           {servicios.map((servicio) => (
             <article className="servicio-card" key={servicio.id}>
               <div className="servicio-card-image">
-                <img src={servicio.thumbnail} alt={servicio.titulo} />
+                <img
+                  src={servicio.thumbnail}
+                  alt={servicio.titulo}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
               <div className="servicio-card-content servicio-card-content--compact">
@@ -73,17 +78,23 @@ export default function ServiciosSection() {
             </button>
 
             <div className="servicio-modal-image">
-              <img src={servicioActivo.thumbnail} alt={servicioActivo.titulo} />
+              <img
+                src={servicioActivo.thumbnail}
+                alt={servicioActivo.titulo}
+                decoding="async"
+              />
             </div>
 
             <div className="servicio-modal-content">
               <h3>{servicioActivo.titulo}</h3>
+
               <p className="servicio-subtitulo">{servicioActivo.subtitulo}</p>
 
               <p className="servicio-parrafo">{servicioActivo.paraQueSirve}</p>
 
               <div className="servicio-incluye">
                 <h4>Incluye</h4>
+
                 <ul>
                   {servicioActivo.incluye.map((item, index) => (
                     <li key={index}>{item}</li>

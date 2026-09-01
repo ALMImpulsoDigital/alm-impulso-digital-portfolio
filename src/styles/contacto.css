@@ -1,268 +1,426 @@
 .contacto {
-  padding: 6rem 2rem;
-  background: var(--color-principal-claro);
+  padding: 6rem 2rem 2rem;
+  background: var(--color-ivory);
+  border-top: 3px solid var(--color-blue);
 }
 
 .contacto-inner {
   max-width: 1120px;
   margin: 0 auto;
+}
+
+
+/* ==============================
+   ENCABEZADO
+============================== */
+
+.contacto-header {
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
   text-align: center;
 }
 
 .contacto-eyebrow {
   display: inline-block;
-  margin-bottom: 0.65rem;
-  color: var(--accent);
-  font-size: 0.82rem;
+
+  margin-bottom: 0.7rem;
+
+  color: var(--color-burgundy);
+
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
+
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 .contacto-title {
   margin: 0 0 1rem;
-  color: var(--title);
-  font-size: clamp(2.3rem, 5vw, 3.2rem);
-  line-height: 1.1;
+
+  color: var(--color-text-primary);
+
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.15;
 }
 
 .contacto-text {
-  max-width: 650px;
-  margin: 0 auto 2rem;
-  color: var(--text);
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-.contacto-cta {
+
+/* ==============================
+   PANEL PRINCIPAL
+============================== */
+
+.contacto-panel {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 50px rgba(34, 54, 73, 0.08);
+}
+
+
+/* ==============================
+   PRESENTACIÓN
+============================== */
+
+.contacto-presentacion {
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 70, 117, 0.97),
+      rgba(34, 54, 73, 0.96)
+    );
+
+  color: #ffffff;
+}
+
+.contacto-small-title {
+  margin-bottom: 1rem;
+
+  color: var(--color-burgundy-light);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.contacto-presentacion h3 {
+  margin: 0 0 1.2rem;
+
+  color: #ffffff;
+
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  line-height: 1.3;
+}
+
+.contacto-presentacion p {
+  margin: 0 0 1rem;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.contacto-zona {
+  margin-top: 0.5rem !important;
+
+  font-size: 0.9rem !important;
+  font-weight: 600;
+}
+
+
+/* ==============================
+   BOTÓN WHATSAPP
+============================== */
+
+.contacto-whatsapp-btn {
+  width: fit-content;
+
+  margin-top: 1.3rem;
+
+  padding: 0.9rem 1.35rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
 
-  padding: 0.95rem 1.8rem;
+  gap: 0.65rem;
 
-  background: var(--accent);
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--color-blue);
 
-  border-radius: 12px;
+  border-radius: 10px;
+
   font-weight: 700;
-  text-decoration: none;
 
-  box-shadow: 0 10px 24px rgba(209, 89, 83, 0.22);
+  text-decoration: none;
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.contacto-cta svg {
+.contacto-whatsapp-btn svg {
+  color: #1eaa50;
+
   font-size: 1.35rem;
 }
 
-.contacto-cta:hover {
+.contacto-whatsapp-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(209, 89, 83, 0.3);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.18);
 }
 
-.contacto-grid {
-  margin-top: 3.5rem;
 
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4rem;
-}
+/* ==============================
+   DATOS
+============================== */
 
-.contacto-block {
-  min-height: 250px;
-  padding: 2rem 1.5rem;
+.contacto-datos {
+  padding: 1rem 2.2rem;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(138, 119, 90, 0.2);
-  border-radius: 18px;
-
-  box-shadow: 0 12px 35px rgba(70, 55, 40, 0.06);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  justify-content: center;
 }
 
-.contacto-block:hover {
-  transform: translateY(-6px);
-  border-color: rgba(209, 89, 83, 0.35);
-  box-shadow: 0 18px 38px rgba(70, 55, 40, 0.11);
-}
-
-.contacto-block-whatsapp {
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.78),
-      rgba(255, 255, 255, 0.58)
-    );
-}
-
-.contacto-icon {
-  width: 54px;
-  height: 54px;
-  margin-bottom: 1.2rem;
+.contacto-dato {
+  padding: 1.3rem 0;
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  background: rgba(209, 89, 83, 0.11);
-  color: var(--accent);
+  gap: 1rem;
 
-  border-radius: 16px;
+  color: var(--color-text-primary);
 
-  font-size: 1.55rem;
-  font-weight: 800;
-}
-
-.contacto-icon-whatsapp {
-  background: rgba(37, 211, 102, 0.13);
-  color: #1eaa50;
-  font-size: 1.8rem;
-}
-
-.contacto-subtitle {
-  margin: 0 0 0.7rem;
-  color: var(--title);
-  font-size: 1.2rem;
-}
-
-.contacto-description {
-  min-height: 52px;
-  margin: 0 0 1.3rem;
-
-  color: var(--text);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.contacto-link {
-  margin-top: auto;
-
-  color: var(--accent);
-  font-weight: 700;
   text-decoration: none;
 
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid var(--color-border);
 
   transition:
-    color 0.2s ease,
-    border-color 0.2s ease;
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
-.contacto-link:hover {
-  border-bottom-color: currentColor;
+.contacto-dato:last-child {
+  border-bottom: none;
 }
 
-.contacto-email {
-  font-size: 0.93rem;
-  overflow-wrap: anywhere;
+.contacto-dato:hover {
+  transform: translateX(5px);
 }
 
-.contacto-social {
-  margin-top: auto;
-
-  display: flex;
-  justify-content: center;
-  gap: 0.85rem;
+.contacto-dato:hover strong {
+  color: var(--color-burgundy);
 }
 
-.social-btn {
+
+/* ==============================
+   ICONOS
+============================== */
+
+.contacto-dato-icon {
+  flex: 0 0 46px;
+
   width: 46px;
   height: 46px;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(138, 119, 90, 0.22);
-  border-radius: 13px;
+  background: rgba(149, 61, 84, 0.09);
+  color: var(--color-burgundy);
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  border-radius: 12px;
+
+  font-size: 1.25rem;
 }
 
-.social-btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  border-color: rgba(209, 89, 83, 0.45);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.11);
+.contacto-dato-whatsapp {
+  background: rgba(37, 211, 102, 0.12);
+  color: #1eaa50;
 }
 
-.social-btn img {
-  width: 22px;
-  height: 22px;
-  opacity: 0.82;
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
+.contacto-dato-instagram {
+  background: rgba(149, 61, 84, 0.1);
 }
 
-.social-btn:hover img {
-  opacity: 1;
-  transform: scale(1.08);
+
+/* ==============================
+   TEXTO DE DATOS
+============================== */
+
+.contacto-dato > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.contacto-cta:focus-visible,
-.contacto-link:focus-visible,
-.social-btn:focus-visible {
-  outline: 3px solid rgba(209, 89, 83, 0.45);
+.contacto-dato-label {
+  margin-bottom: 0.15rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.78rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contacto-dato strong {
+  color: var(--color-text-primary);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+
+  transition: color 0.2s ease;
+}
+
+.contacto-dato small {
+  margin-top: 0.2rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.84rem;
+}
+
+
+/* ==============================
+   PIE
+============================== */
+
+.contacto-bottom {
+  padding-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.8rem;
+}
+
+
+/* ==============================
+   ACCESIBILIDAD
+============================== */
+
+.contacto-whatsapp-btn:focus-visible,
+.contacto-dato:focus-visible {
+  outline: 3px solid rgba(149, 61, 84, 0.35);
   outline-offset: 4px;
 }
 
-/* Tablet */
-@media (max-width: 900px) {
-  .contacto-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-  .contacto-block:last-child {
-    grid-column: 1 / -1;
-    max-width: 520px;
-    width: 100%;
-    justify-self: center;
-  }
-}
+/* ==============================
+   TABLET
+============================== */
 
-/* Celular */
-@media (max-width: 620px) {
+@media (max-width: 850px) {
+
   .contacto {
-    padding: 4.5rem 1.2rem;
+    padding: 5rem 1.5rem 2rem;
   }
 
-  .contacto-text br {
-    display: none;
-  }
-
-  .contacto-grid {
-    margin-top: 2.8rem;
+  .contacto-panel {
     grid-template-columns: 1fr;
   }
 
-  .contacto-block,
-  .contacto-block:last-child {
-    grid-column: auto;
-    width: auto;
-    max-width: none;
-    min-height: auto;
+  .contacto-presentacion {
+    padding: 2.5rem;
   }
 
-  .contacto-cta {
-    width: 100%;
-    max-width: 340px;
+  .contacto-datos {
+    padding: 1rem 2.5rem;
   }
+
+}
+
+
+/* ==============================
+   CELULAR
+============================== */
+
+@media (max-width: 600px) {
+
+  .contacto {
+    padding: 4.5rem 1rem 1.5rem;
+  }
+
+  .contacto-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .contacto-title {
+    font-size: 2rem;
+  }
+
+  .contacto-text {
+    font-size: 0.96rem;
+  }
+
+  .contacto-panel {
+    border-radius: 16px;
+  }
+
+  .contacto-presentacion {
+    padding: 2rem 1.5rem;
+  }
+
+  .contacto-presentacion h3 {
+    font-size: 1.55rem;
+  }
+
+  .contacto-whatsapp-btn {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .contacto-datos {
+    padding: 0.6rem 1.4rem;
+  }
+
+  .contacto-dato {
+    padding: 1.2rem 0;
+  }
+
+  .contacto-dato-icon {
+    flex-basis: 42px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 1.15rem;
+  }
+
+  .contacto-dato strong {
+    font-size: 0.93rem;
+  }
+
+  .contacto-bottom {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 0.35rem;
+  }
+
 }

@@ -12,9 +12,10 @@ export default function ProyectosSection() {
         <div className="proyectos-mitad proyectos-mitad-web">
           <div className="proyecto-content">
             <img
-              src="/assets/iconopc.png"
+              src="/assets/iconopc.webp"
               alt="Proyectos de desarrollo web"
               className="proyecto-icono"
+              loading="lazy"
             />
 
             <h3>Proyectos Web</h3>
@@ -28,9 +29,10 @@ export default function ProyectosSection() {
         <div className="proyectos-mitad proyectos-mitad-mobile">
           <div className="proyecto-content">
             <img
-              src="/assets/iconocel.png"
+              src="/assets/iconocel.webp"
               alt="Proyectos de aplicaciones móviles"
               className="proyecto-icono"
+              loading="lazy"
             />
 
             <h3>Aplicaciones Móviles</h3>

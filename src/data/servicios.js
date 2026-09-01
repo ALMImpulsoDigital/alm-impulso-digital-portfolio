@@ -8,7 +8,7 @@ export const servicios = [
       "Ideal para promocionar un servicio o producto específico, captar leads y llevar a una acción clara (WhatsApp, formulario, agenda).",
     incluye: ["Hero + propuesta de valor", "Beneficios", "Testimonios", "CTA", "Formulario / WhatsApp"],
     ejemplo: "Ejemplo: lanzamiento de un curso, servicio profesional, promoción puntual.",
-    thumbnail: "/assets/servicios/LandingPage.png",
+    thumbnail: "/assets/servicios/LandingPage.webp",
     vimeoId: "1156856136",
     
   },
@@ -20,7 +20,7 @@ export const servicios = [
       "Perfecta para presentar quién sos, qué hacés, tu portfolio y contacto sin navegar a otras páginas. Muy usada en portfolios y estudios.",
     incluye: ["Sección servicios", "Sección proyectos", "Sobre mí", "Contacto", "Diseño responsive"],
     ejemplo: "Ejemplo: portfolio profesional, estudio creativo, emprendimiento personal.",
-    thumbnail: "/assets/servicios/OnePage.jpeg",
+    thumbnail: "/assets/servicios/OnePage.webp",
     vimeoId: "1156594363",
     
   },
@@ -32,7 +32,7 @@ export const servicios = [
       "Para empresas o marcas que necesitan estructura: Home, servicios, nosotros, clientes, blog, contacto. Refuerza confianza y posicionamiento.",
     incluye: ["Navegación por secciones", "Páginas internas", "Optimización técnica para buscadores", "Optimización de performance"],
     ejemplo: "Ejemplo: estudio contable, inmobiliaria, consultora, comercio local.",
-    thumbnail: "/assets/servicios/WebCoorporativa.png",
+    thumbnail: "/assets/servicios/WebCoorporativa.webp",
     vimeoId: "1156856122",
     
   },
@@ -49,7 +49,7 @@ export const servicios = [
   "Reportes y gestión de información"
 ],
     ejemplo: "Ejemplo: reservas de canchas, taller mecánico, catálogo con gestión, turnos.",
-    thumbnail: "/assets/servicios/SistemaWeb.png",
+    thumbnail: "/assets/servicios/SistemaWeb.webp",
     vimeoId: "1156856106",
     
   },
@@ -61,7 +61,7 @@ export const servicios = [
       "Para vender productos o servicios con flujo de compra: categorías, carrito, checkout y pagos (según necesidad: Mercado Pago u otros).",
     incluye: ["Catálogo administrable", "Carrito", "Checkout", "Integración de pagos"],
     ejemplo: "Ejemplo: pastelería, tienda de productos, emprendimientos de ventas.",
-    thumbnail: "/assets/servicios/E-commerce.png",
+    thumbnail: "/assets/servicios/E-commerce.webp",
     vimeoId: "1156856066",
     
   },
@@ -73,7 +73,7 @@ export const servicios = [
       "Ideal si querés una experiencia móvil optimizada: seguimiento, notificaciones, consultas rápidas, acciones desde el teléfono.",
     incluye: ["Flutter", "Consumo de API", "Login/roles", "UI moderna + responsive"],
     ejemplo: "Ejemplo: app complemento de sistema web (taller, canchas, pedidos, etc.).",
-    thumbnail: "/assets/servicios/AppMovil.jpeg",
+    thumbnail: "/assets/servicios/AppMovil.webp",
     vimeoId: "1156856024",
     
   },
