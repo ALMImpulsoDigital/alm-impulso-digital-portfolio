@@ -4,152 +4,125 @@ export const servicios = [
   {
     id: "landing",
     titulo: "Landing Page",
-    subtitulo: "Una sola página para convertir visitas en consultas",
-
+    subtitulo: "Una página enfocada en generar consultas o ventas",
     paraQueSirve:
-      "Ideal para promocionar un servicio o producto específico, captar leads y llevar a una acción clara (WhatsApp, formulario, agenda).",
-
+      "Ideal para promocionar un servicio, producto, evento o campaña específica y dirigir al visitante hacia una acción concreta, como enviar un mensaje, completar un formulario o solicitar un presupuesto.",
     incluye: [
-      "Hero + propuesta de valor",
-      "Beneficios",
-      "Testimonios",
-      "CTA",
-      "Formulario / WhatsApp",
+      "Presentación de la propuesta",
+      "Beneficios principales",
+      "Llamados a la acción",
+      "Formulario de contacto",
+      "Integración con WhatsApp",
     ],
-
     ejemplo:
-      "Ejemplo: lanzamiento de un curso, servicio profesional, promoción puntual.",
-
+      "Ejemplo: lanzamiento de un curso, promoción de un servicio o campaña publicitaria.",
     thumbnail: "/assets/servicios/LandingPage.webp",
     width: 500,
     height: 476,
-
-    vimeoId: "1156856136",
   },
 
   {
-    id: "onepage",
-    titulo: "Sitio Web - One Page",
-    subtitulo: "Tu marca completa en una sola página, elegante y directa",
-
+    id: "sitio-web",
+    titulo: "Sitio Web Profesional",
+    subtitulo: "La presencia digital completa de tu negocio",
     paraQueSirve:
-      "Perfecta para presentar quién sos, qué hacés, tu portfolio y contacto sin navegar a otras páginas. Muy usada en portfolios y estudios.",
-
+      "Pensado para empresas, profesionales y comercios que necesitan presentar sus servicios, trayectoria, proyectos y medios de contacto de manera clara y profesional.",
     incluye: [
-      "Sección servicios",
-      "Sección proyectos",
-      "Sobre mí",
-      "Contacto",
-      "Diseño responsive",
-    ],
-
-    ejemplo:
-      "Ejemplo: portfolio profesional, estudio creativo, emprendimiento personal.",
-
-    thumbnail: "/assets/servicios/OnePage.webp",
-    width: 497,
-    height: 500,
-
-    vimeoId: "1156594363",
-  },
-
-  {
-    id: "corporativa",
-    titulo: "Web Corporativa",
-    subtitulo: "Sitio profesional con varias páginas para tu negocio",
-
-    paraQueSirve:
-      "Para empresas o marcas que necesitan estructura: Home, servicios, nosotros, clientes, blog, contacto. Refuerza confianza y posicionamiento.",
-
-    incluye: [
-      "Navegación por secciones",
-      "Páginas internas",
+      "Inicio y presentación del negocio",
+      "Servicios o productos",
+      "Sección institucional",
+      "Contacto y redes sociales",
+      "Diseño adaptable a celulares",
       "Optimización técnica para buscadores",
-      "Optimización de performance",
     ],
-
     ejemplo:
-      "Ejemplo: estudio contable, inmobiliaria, consultora, comercio local.",
-
+      "Ejemplo: estudio profesional, consultora, inmobiliaria, comercio o portfolio.",
     thumbnail: "/assets/servicios/WebCoorporativa.webp",
     width: 500,
     height: 333,
-
-    vimeoId: "1156856122",
-  },
-
-  {
-    id: "sistema",
-    titulo: "Sistema Web con Base de Datos",
-    subtitulo: "Gestión completa: admin + usuarios + datos en tiempo real",
-
-    paraQueSirve:
-      "Ideal para negocios que necesitan organizar y automatizar su gestión mediante un sistema a medida: reservas, turnos, pedidos, stock, clientes, panel administrador y reportes.",
-
-    incluye: [
-      "Panel de administración",
-      "Gestión de usuarios y permisos",
-      "Base de datos",
-      "Reportes y gestión de información",
-    ],
-
-    ejemplo:
-      "Ejemplo: reservas de canchas, taller mecánico, catálogo con gestión, turnos.",
-
-    thumbnail: "/assets/servicios/SistemaWeb.webp",
-    width: 500,
-    height: 333,
-
-    vimeoId: "1156856106",
   },
 
   {
     id: "ecommerce",
-    titulo: "E-commerce / Tienda Online",
-    subtitulo: "Catálogo + carrito + pagos online",
-
+    titulo: "Tienda Online",
+    subtitulo: "Vendé tus productos por Internet",
     paraQueSirve:
-      "Para vender productos o servicios con flujo de compra: categorías, carrito, checkout y pagos (según necesidad: Mercado Pago u otros).",
-
+      "Para negocios que necesitan mostrar productos, administrar precios y stock, recibir pedidos y ofrecer pagos online.",
     incluye: [
       "Catálogo administrable",
-      "Carrito",
-      "Checkout",
-      "Integración de pagos",
+      "Categorías y buscador",
+      "Carrito de compras",
+      "Proceso de compra",
+      "Integración con medios de pago",
+      "Panel de administración",
     ],
-
     ejemplo:
-      "Ejemplo: pastelería, tienda de productos, emprendimientos de ventas.",
-
+      "Ejemplo: tienda de indumentaria, pastelería, cosmética o venta de productos.",
     thumbnail: "/assets/servicios/E-commerce.webp",
     width: 500,
     height: 333,
+  },
 
-    vimeoId: "1156856066",
+  {
+    id: "sistema-medida",
+    titulo: "Sistemas de Gestión a Medida",
+    subtitulo: "Una solución creada para la forma de trabajar de tu negocio",
+    paraQueSirve:
+      "Ideal para digitalizar tareas, centralizar información y automatizar procesos que actualmente se realizan de forma manual, con planillas o mediante distintas herramientas.",
+    incluye: [
+      "Panel de administración",
+      "Usuarios y permisos",
+      "Base de datos",
+      "Gestión de clientes y operaciones",
+      "Reportes y estadísticas",
+      "Funciones adaptadas al negocio",
+    ],
+    ejemplo:
+      "Ejemplo: sistema de turnos, reservas, talleres, clientes, pedidos o gestión interna.",
+    thumbnail: "/assets/servicios/SistemaWeb.webp",
+    width: 500,
+    height: 333,
+  },
+
+  {
+    id: "sistema-kioscos",
+    titulo: "Sistema para Kioscos y Despensas",
+    subtitulo: "Ventas, productos y stock en un solo lugar",
+    paraQueSirve:
+      "Sistema pensado especialmente para kioscos, despensas y pequeños comercios que necesitan registrar ventas, controlar productos y conocer el movimiento diario del negocio.",
+    incluye: [
+      "Registro rápido de ventas",
+      "Control de productos y stock",
+      "Categorías y proveedores",
+      "Usuarios con diferentes permisos",
+      "Historial y reportes de ventas",
+      "Funcionamiento desde computadora",
+    ],
+    ejemplo:
+      "Ejemplo: kioscos, despensas, almacenes y pequeños comercios con venta en mostrador.",
+   thumbnail: "/assets/servicios/SistemaKiosco.webp",
+width: 1000,
+height: 667,
   },
 
   {
     id: "mobile",
     titulo: "Aplicaciones Móviles",
-    subtitulo: "Una app para llevar tu servicio al bolsillo",
-
+    subtitulo: "Tu servicio disponible desde el celular",
     paraQueSirve:
-      "Ideal si querés una experiencia móvil optimizada: seguimiento, notificaciones, consultas rápidas, acciones desde el teléfono.",
-
+      "Para proyectos que necesitan ofrecer una experiencia específicamente diseñada para teléfonos, con acceso rápido, usuarios registrados y funciones personalizadas.",
     incluye: [
-      "Flutter",
-      "Consumo de API",
-      "Login/roles",
-      "UI moderna + responsive",
+      "Diseño de la aplicación",
+      "Registro e inicio de sesión",
+      "Conexión con base de datos",
+      "Integración con sistemas y servicios",
+      "Notificaciones, según el proyecto",
+      "Desarrollo para Android y/o iOS",
     ],
-
     ejemplo:
-      "Ejemplo: app complemento de sistema web (taller, canchas, pedidos, etc.).",
-
+      "Ejemplo: aplicación de pedidos, reservas, seguimiento, turnos o gestión.",
     thumbnail: "/assets/servicios/AppMovil.webp",
     width: 500,
     height: 464,
-
-    vimeoId: "1156856024",
   },
 ];

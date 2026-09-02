@@ -1,5 +1,81 @@
 export const proyectosWeb = [
-  {
+ {
+  titulo: "Web Sassi Automotores",
+  descripcion:
+    "Sitio web desarrollado para una concesionaria, con catálogo público de vehículos 0 km y usados. Permite filtrar por marca y tipo, buscar vehículos, consultar sus características e imágenes y contactar a la empresa por WhatsApp con el automóvil seleccionado. Incluye un panel administrativo con autenticación para gestionar vehículos, fotografías, precios, estados de disponibilidad y clientes. También cuenta con recuperación de contraseña, información institucional, ubicación y medios de contacto.",
+  tipo: "vimeo",
+  vimeoId: "1223440898", 
+  thumbnail: "/assets/proyectos/sassiAutomotores.webp",
+  tecnologias: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Supabase",
+    "PostgreSQL",
+    "Supabase Storage",
+    "Vercel",
+  ],
+},
+  
+
+{
+  titulo: "Sistema de Turnos Aura Glow",
+  descripcion:
+    "Plataforma web para un centro de estética que permite consultar servicios, seleccionar un profesional, elegir una fecha y reservar entre los horarios disponibles. El sistema calcula la disponibilidad según la duración del servicio, los horarios laborales, los bloqueos de agenda y las reservas existentes. Incluye pago de seña mediante Mercado Pago y un panel administrativo para gestionar reservas, clientes, servicios, profesionales, horarios, bloqueos y pagos.",
+  tipo: "vimeo",
+  vimeoId: "1223440897", 
+  thumbnail: "/assets/proyectos/auraGlow.webp",
+  tecnologias: [
+    "React",
+    "Vite",
+    "Material UI",
+    "Supabase",
+    "PostgreSQL",
+    "Mercado Pago",
+    "Vercel",
+  ],
+},
+
+{
+  titulo: "E-commerce B&W",
+  descripcion:
+    "Tienda online desarrollada para gestionar productos con variantes de color y talle, stock disponible e imágenes. Incluye catálogo organizado por categorías, carrito de compras, checkout, integración con Mercado Pago y un panel administrativo para crear, modificar y eliminar productos, administrar variantes y controlar el inventario. La información, autenticación e imágenes se gestionan mediante una base de datos en la nube.",
+  tipo: "vimeo",
+  vimeoId: "1223440896",
+  thumbnail: "/assets/proyectos/ecommerceBW.webp",
+  tecnologias: [
+    "React",
+    "Vite",
+    "Supabase",
+    "PostgreSQL",
+    "Supabase Storage",
+    "Mercado Pago",
+    "Vercel",
+  ],
+},
+
+{
+  titulo: "Sistema para Kioscos y Despensas",
+  descripcion:
+    "Sistema de escritorio desarrollado para administrar las operaciones diarias de kioscos, despensas y pequeños comercios. Permite registrar ventas, gestionar productos, categorías, proveedores y usuarios, controlar el stock y consultar reportes por fecha y método de pago. Incluye roles de administrador y vendedor, cancelación de ventas con registro del motivo y exportación de información a Excel. Funciona mediante un programa ejecutable y utiliza una base de datos local, por lo que no depende de una conexión permanente a Internet.",
+  tipo: "vimeo",
+  vimeoId: "1223440895", 
+  thumbnail: "/assets/proyectos/sistemaKiosco.webp",
+  tecnologias: [
+    "React",
+    "Vite",
+    "Material UI",
+    "Electron",
+    "ASP.NET Core",
+    "Entity Framework",
+    "SQL Server",
+    "JWT",
+  ],
+},
+
+
+
+{   
     titulo: "Sistema Web Pastelería Munay",
     descripcion:
       "Web comercial con catálogo, carrito, presupuestos personalizados y pagos online.",

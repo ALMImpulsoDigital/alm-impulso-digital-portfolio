@@ -7,6 +7,16 @@ import "../styles/serviciosSection.css";
 export default function ServiciosSection() {
   const [servicioActivo, setServicioActivo] = useState(null);
 
+  const numeroWhatsApp = "5493541678553";
+
+  const crearEnlaceWhatsApp = (tituloServicio) => {
+    const mensaje = `Hola, quiero consultar por el servicio de ${tituloServicio}.`;
+
+    return `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+      mensaje,
+    )}`;
+  };
+
   return (
     <section className="servicios-section" id="servicios">
       <div className="servicios-container">
@@ -111,7 +121,13 @@ export default function ServiciosSection() {
               <p className="servicio-ejemplo">{servicioActivo.ejemplo}</p>
 
               <div className="servicio-modal-actions">
-                <a href="#contacto" className="servicio-btn">
+                <a
+                  href={crearEnlaceWhatsApp(servicioActivo.titulo)}
+                  className="servicio-btn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Consultar por ${servicioActivo.titulo} mediante WhatsApp`}
+                >
                   Consultar por este servicio
                 </a>
 

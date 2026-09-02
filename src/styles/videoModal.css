@@ -1,80 +1,190 @@
+/* ==============================
+   FONDO DEL MODAL
+============================== */
+
 .video-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  z-index: 999;
+  z-index: 2000;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
-/* Base */
+/* ==============================
+   CONTENEDOR GENERAL
+============================== */
+
 .video-modal {
-  background: #000;
-  border-radius: 14px;
   position: relative;
-  padding: 10px;
+  flex: 0 0 auto;
+  padding: 0.6rem;
+  overflow: visible;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
 }
 
-/* ✅ Horizontal (proyectos web) -> grande */
-.video-modal.horizontal {
-  width: 70%;
-  max-width: 1000px;
+/* ==============================
+   VIDEO HORIZONTAL
+============================== */
+
+.video-modal-horizontal {
+  width: min(
+    1000px,
+    calc(100vw - 3rem),
+    calc((100dvh - 3rem) * 16 / 9)
+  );
 }
 
-/* ✅ Vertical (servicios) -> chico tipo celular */
-.video-modal.vertical {
-  width: 30%;
-  max-width: 340px;
+/* ==============================
+   VIDEO VERTICAL
+============================== */
+
+.video-modal-vertical {
+  width: min(
+    340px,
+    calc(100vw - 3rem),
+    calc((100dvh - 3rem) * 9 / 16)
+  );
 }
 
-/* Responsive (uno solo) */
-@media (max-width: 768px) {
-  .video-modal.horizontal,
-  .video-modal.vertical {
-    width: 92%;
-    max-width: none;
-  }
-}
+/* ==============================
+   CONTENEDOR DEL IFRAME
+============================== */
 
-/* WRAPPER BASE */
 .video-wrapper {
   position: relative;
   width: 100%;
-  border-radius: 14px;
   overflow: hidden;
+  background-color: #000000;
+  border-radius: 11px;
 }
 
-/* HORIZONTAL 16:9 */
-.video-wrapper.horizontal {
-  padding-top: 56.25%;
+.video-wrapper-horizontal {
+  aspect-ratio: 16 / 9;
 }
 
-/* VERTICAL (reel/móvil) */
-.video-wrapper.vertical {
-  padding-top: 160%;
-  max-height: 65vh;
+.video-wrapper-vertical {
+  aspect-ratio: 9 / 16;
 }
 
-/* iframe */
+/* ==============================
+   IFRAME
+============================== */
+
 .video-wrapper iframe {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  border-radius: 14px;
+  border: 0;
+  border-radius: 11px;
 }
 
-/* cerrar */
-.close {
+/* ==============================
+   BOTÓN CERRAR
+============================== */
+
+.video-modal-close {
   position: absolute;
-  top: -32px;
-  right: 6px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  font-size: 22px;
-  border: none;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.72);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.video-modal-close:hover {
+  background-color: var(--color-burgundy);
+  border-color: var(--color-burgundy);
+  transform: scale(1.06);
+}
+
+.video-modal-close:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
+}
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 768px) {
+  .video-modal-overlay {
+    padding: 1rem;
+  }
+
+  .video-modal-horizontal {
+    width: min(
+      calc(100vw - 2rem),
+      calc((100dvh - 2rem) * 16 / 9)
+    );
+  }
+
+  .video-modal-vertical {
+    width: min(
+      340px,
+      calc(100vw - 2rem),
+      calc((100dvh - 2rem) * 9 / 16)
+    );
+  }
+
+  .video-modal-close {
+    top: 0.8rem;
+    right: 0.8rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+}
+
+/* ==============================
+   PANTALLAS BAJAS
+============================== */
+
+@media (max-height: 600px) {
+  .video-modal-overlay {
+    padding: 0.75rem;
+  }
+
+  .video-modal-horizontal {
+    width: min(
+      calc(100vw - 1.5rem),
+      calc((100dvh - 1.5rem) * 16 / 9)
+    );
+  }
+
+  .video-modal-vertical {
+    width: min(
+      300px,
+      calc(100vw - 1.5rem),
+      calc((100dvh - 1.5rem) * 9 / 16)
+    );
+  }
 }

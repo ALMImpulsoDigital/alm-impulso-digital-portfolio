@@ -4,50 +4,90 @@ import "../styles/proyectosSection.css";
 
 export default function ProyectosSection() {
   return (
-    <section className="proyectos-section" id="proyectos">
-      <h2 className="proyectos-titulo">
-        Proyectos de Desarrollo Web y Aplicaciones Móviles
-      </h2>
+    <section
+      className="proyectos-section"
+      id="proyectos"
+      aria-labelledby="proyectos-titulo"
+    >
+      <div className="proyectos-container">
+        <p className="proyectos-etiqueta">Proyectos</p>
 
-      <div className="proyectos-franja">
-        <div className="proyectos-mitad proyectos-mitad-web">
-          <div className="proyecto-content">
-            <img
-              src="/assets/iconopc.webp"
-              alt="Proyectos de desarrollo web"
-              className="proyecto-icono"
-              loading="lazy"
-              decoding="async"
-              width="420"
-              height="280"
-            />
+        <h2 className="proyectos-titulo" id="proyectos-titulo">
+          Proyectos de desarrollo web y aplicaciones móviles
+        </h2>
 
-            <h3>Proyectos Web</h3>
+        <div className="proyectos-grid">
+          <article className="proyecto-categoria-card proyecto-card-web">
+            <div className="proyecto-info">
+              <p className="proyecto-categoria">Proyectos web</p>
 
-            <Link to="/proyectos/web" className="proyecto-boton">
-              Ver proyectos web →
-            </Link>
-          </div>
-        </div>
+              <h3>Desarrollo de sitios web</h3>
 
-        <div className="proyectos-mitad proyectos-mitad-mobile">
-          <div className="proyecto-content">
-            <img
-              src="/assets/iconocel.webp"
-              alt="Proyectos de aplicaciones móviles"
-              className="proyecto-icono"
-              loading="lazy"
-              decoding="async"
-              width="420"
-              height="280"
-            />
+              <p className="proyecto-descripcion">
+                Sitios institucionales, tiendas online, landing pages y
+                plataformas desarrolladas a medida.
+              </p>
 
-            <h3>Aplicaciones Móviles</h3>
+              <Link
+                to="/proyectos/web"
+                className="proyecto-boton proyecto-boton-web"
+                aria-label="Ver proyectos de desarrollo web"
+              >
+                <span>Ver proyectos web</span>
+                <span className="proyecto-flecha" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            </div>
 
-            <Link to="/proyectos/mobile" className="proyecto-boton">
-              Ver aplicaciones móviles →
-            </Link>
-          </div>
+            <div className="proyecto-imagen-contenedor proyecto-imagen-web">
+              <img
+                src="/assets/computadora-web-cabanas.webp"
+                alt="Computadora mostrando un sitio web moderno de cabañas"
+                className="proyecto-imagen"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="720"
+              />
+            </div>
+          </article>
+
+          <article className="proyecto-categoria-card proyecto-card-mobile">
+            <div className="proyecto-info">
+              <p className="proyecto-categoria">Aplicaciones móviles</p>
+
+              <h3>Desarrollo de aplicaciones</h3>
+
+              <p className="proyecto-descripcion">
+                Aplicaciones móviles modernas, intuitivas y adaptadas a las
+                necesidades de cada negocio.
+              </p>
+
+              <Link
+                to="/proyectos/mobile"
+                className="proyecto-boton proyecto-boton-mobile"
+                aria-label="Ver proyectos de aplicaciones móviles"
+              >
+                <span>Ver aplicaciones móviles</span>
+                <span className="proyecto-flecha" aria-hidden="true">
+                  →
+                </span>
+              </Link>
+            </div>
+
+            <div className="proyecto-imagen-contenedor proyecto-imagen-mobile">
+              <img
+                src="/assets/celular-app-hamburguesas.webp"
+                alt="Celular mostrando una aplicación móvil para realizar pedidos de hamburguesas"
+                className="proyecto-imagen"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="720"
+              />
+            </div>
+          </article>
         </div>
       </div>
     </section>
