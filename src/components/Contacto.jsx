@@ -128,12 +128,6 @@ export default function Contacto() {
             </a>
           </div>
         </div>
-
-        <div className="contacto-bottom">
-          <span>© 2026 ALM Impulso Digital</span>
-
-          <span>Páginas Web · Sistemas · Aplicaciones</span>
-        </div>
       </div>
     </section>
   );

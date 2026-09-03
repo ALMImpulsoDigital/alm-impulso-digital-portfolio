@@ -2,24 +2,25 @@
 
 export const servicios = [
   {
-    id: "landing",
-    titulo: "Landing Page",
-    subtitulo: "Una página enfocada en generar consultas o ventas",
-    paraQueSirve:
-      "Ideal para promocionar un servicio, producto, evento o campaña específica y dirigir al visitante hacia una acción concreta, como enviar un mensaje, completar un formulario o solicitar un presupuesto.",
-    incluye: [
-      "Presentación de la propuesta",
-      "Beneficios principales",
-      "Llamados a la acción",
-      "Formulario de contacto",
-      "Integración con WhatsApp",
-    ],
-    ejemplo:
-      "Ejemplo: lanzamiento de un curso, promoción de un servicio o campaña publicitaria.",
-    thumbnail: "/assets/servicios/LandingPage.webp",
-    width: 500,
-    height: 476,
-  },
+  id: "landing",
+  titulo: "Landing Page",
+  subtitulo: "Una página de presentación clara, breve y enfocada",
+  paraQueSirve:
+    "Es una página de presentación ideal para mostrar un negocio, servicio, producto, evento o propuesta específica de manera clara y profesional. Su contenido se organiza en una sola página y guía al visitante hacia una acción concreta, como enviar un mensaje, completar un formulario o solicitar un presupuesto.",
+  incluye: [
+    "Presentación del negocio o propuesta",
+    "Descripción del servicio o producto",
+    "Beneficios principales",
+    "Llamados a la acción",
+    "Formulario de contacto",
+    "Integración con WhatsApp",
+  ],
+  ejemplo:
+    "Ejemplo: presentación de un profesional o emprendimiento, promoción de un servicio, lanzamiento de un producto o campaña publicitaria.",
+  thumbnail: "/assets/servicios/LandingPage.webp",
+  width: 500,
+  height: 476,
+},
 
   {
     id: "sitio-web",
@@ -117,7 +118,7 @@ height: 667,
       "Conexión con base de datos",
       "Integración con sistemas y servicios",
       "Notificaciones, según el proyecto",
-      "Desarrollo para Android y/o iOS",
+      "Desarrollo para Android",
     ],
     ejemplo:
       "Ejemplo: aplicación de pedidos, reservas, seguimiento, turnos o gestión.",
