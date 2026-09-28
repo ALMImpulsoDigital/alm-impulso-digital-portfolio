@@ -26,6 +26,8 @@ export const servicios = [
     id: "sitio-web",
     titulo: "Sitio Web Profesional",
     subtitulo: "La presencia digital completa de tu negocio",
+    paginaServicio: "/desarrollo-web-cordoba",
+  textoPaginaServicio: "Ver desarrollo web en Córdoba",
     paraQueSirve:
       "Pensado para empresas, profesionales y comercios que necesitan presentar sus servicios, trayectoria, proyectos y medios de contacto de manera clara y profesional.",
     incluye: [
@@ -68,6 +70,8 @@ export const servicios = [
     id: "sistema-medida",
     titulo: "Sistemas de Gestión a Medida",
     subtitulo: "Una solución creada para la forma de trabajar de tu negocio",
+     paginaServicio: "/sistemas-de-gestion-a-medida",
+  textoPaginaServicio: "Ver sistemas a medida",
     paraQueSirve:
       "Ideal para digitalizar tareas, centralizar información y automatizar procesos que actualmente se realizan de forma manual, con planillas o mediante distintas herramientas.",
     incluye: [

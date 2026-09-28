@@ -6,6 +6,8 @@ import WhatsAppFlotante from "./components/WhatsAppFlotante";
 import Home from "./pages/Home";
 import Proyectos from "./components/Proyectos";
 import ScrollToHash from "./components/ScrollToHash";
+import DesarrolloWebCordoba from "./pages/DesarrolloWebCordoba";
+import SistemasGestionMedida from "./pages/SistemasGestionMedida";
 
 export default function App() {
   return (
@@ -18,6 +20,16 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+
+          <Route
+            path="/desarrollo-web-cordoba"
+            element={<DesarrolloWebCordoba />}
+          />
+
+          <Route
+            path="/sistemas-de-gestion-a-medida"
+            element={<SistemasGestionMedida />}
+          />
 
           <Route
             path="/proyectos/web"

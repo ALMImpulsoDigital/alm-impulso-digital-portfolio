@@ -562,6 +562,23 @@
 
 }
 
+.servicio-link-detalle {
+  display: inline-block;
+  margin-top: 0.7rem;
+
+  color: var(--title);
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.servicio-link-detalle:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 /* TABLET */
 
 @media (max-width: 1024px) {

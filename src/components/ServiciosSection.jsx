@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { servicios } from "../data/servicios";
 
@@ -69,6 +70,15 @@ export default function ServiciosSection() {
                   >
                     Ver más
                   </button>
+
+                  {servicio.paginaServicio && (
+                    <Link
+                      to={servicio.paginaServicio}
+                      className="servicio-link-detalle"
+                    >
+                      {servicio.textoPaginaServicio} →
+                    </Link>
+                  )}
                 </div>
               </div>
             </article>
