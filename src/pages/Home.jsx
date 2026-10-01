@@ -16,7 +16,7 @@ export default function Home() {
 
     url: "https://almimpulsodigital.com/",
 
-    logo: "https://almimpulsodigital.com/assets/logo-alm.webp",
+    logo: "https://almimpulsodigital.com/assets/logo-alm-optimizado.webp",
 
     image: "https://almimpulsodigital.com/assets/alm-social-share.png",
 
